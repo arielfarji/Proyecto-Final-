@@ -1,3 +1,4 @@
+/*{box-sizing: border-box};*/
 
 body{
   background-color: rgb(245, 234, 216);
@@ -22,4 +23,11 @@ div.uk-slider-container{
 }
 
 .contenedorcolumna img{
+}
+
+i#buscador {
+	color: black;
+	position: absolute;
+	top: 5px;
+	right: 5px;
 }

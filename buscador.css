@@ -1,0 +1,82 @@
+@import "compass/css3";
+
+/***********************
+ * Essential Structure *
+ ***********************/
+.flexsearch--wrapper {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	overflow: hidden;
+	background: transparent;
+	margin: 0;
+	position: static;
+}
+
+.flexsearch--form {
+	overflow: hidden;
+	position: relative;
+}
+
+.flexsearch--input-wrapper {
+	padding: 0 66px 0 0;
+	overflow: hidden;
+}
+
+.flexsearch--input {
+  width: 100px;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+header {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.flexsearch {
+  padding: 0 25px 0 200px;
+
+}
+
+.flexsearch--wrapper {
+	position: absolute;
+	justify-content: flex-end;
+right: 5px;
+}
+
+.flexsearch--input {
+	-webkit-box-sizing: content-box;
+	    -moz-box-sizing: content-box;
+	    box-sizing: content-box;
+	    padding: 0 10px 0 10px;
+	    border-color: #888;
+	    border-radius: 15px;
+	    border-style: solid;
+	    border-width: 2px;
+	    margin-top: 15px;
+	    color: #333;
+	    font-family: 'Helvetica', sans-serif;
+	    font-size: 10px;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+}
+
+.flexsearch--input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+ 	color: #333;
+}
+
+
+::-webkit-input-placeholder {
+	color: #888;
+}
+
+input:-moz-placeholder {
+  color: #888
+}
