@@ -10,11 +10,18 @@ window.onload = function () {
     for (var i = 0; i < series.length; i++) {
       document.querySelector("div.populares").innerHTML += "<div><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></div>"
     }
-    $('.populares').slick({
-      vertical: true,
-      slidesToShow: 2,
-      slidesToScroll: 2
-    });
+
+    setTimeout(function() {
+      $('.populares').slick({
+        vertical: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplay: true
+      });
+    }, 200)
+
+
+
   }
 )
 
@@ -31,12 +38,18 @@ window.onload = function () {
     }
     /**donde dice src lo busco aparte y para poster es siempr el mismo*/
     /*si quiero poner el titulo de la peli abajo de la imagen, lo que tengo que hacer es una vez que cierro lo de img abro uno nuevo para un p y en ves de poner poster path pongo title porque respuesta.result lo tiene todo junto en series*/
+    setTimeout(function() {
+      $('.mayor-puntaje').slick({
+        vertical: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplay: true
+      });
 
-    $('.mayor-puntaje').slick({
-      vertical: true,
-      slidesToShow: 2,
-      slidesToScroll: 2
-    });
+
+
+    }, 200)
+
   }
 )
 
