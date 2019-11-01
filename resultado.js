@@ -8,12 +8,13 @@ window.onload = function() {
     return response.json();
   })
   .then(function(respuesta) {
+    document.querySelector("h1.title").innerText = "Resultado de ''" + loBuscado + "''";
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path == null) {
-        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='img/error.png'></div>";
+        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
       } else {
-        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/original" + series[i].poster_path + "'></div>";
+        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></div>";
       }
     }
   })
@@ -27,5 +28,4 @@ window.onload = function() {
   lupita.onclick = function() {
     inputBuscador.classList.toggle('inputHidden');
   }
-
 }
