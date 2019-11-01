@@ -1,7 +1,7 @@
 /*{box-sizing: border-box};*/
 
 body{
-  background-color: rgb(245, 234, 216);
+  background-color: rgb(50, 54, 57);
 }
 
 /*
@@ -45,10 +45,15 @@ form.form-buscador .buscadorsecundario.inputHidden {
 
 .columnas{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.columnas div{
+.populares{
   width: 30%;
-  
+}
+.al-aire{
+  width: 30%;
+}
+.mayor-puntaje{
+  width: 30%;
 }
