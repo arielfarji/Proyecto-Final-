@@ -43,9 +43,34 @@ form.form-buscador .buscadorsecundario.inputHidden {
 	width: 0px;
 }
 
+/* menu generos a la izquierda */
+div.menuOculto{
+  display: flex;
+  margin-left: 6px;
+}
+/*q se ponga el pointer en las 3 rayitas*/
+div.padre i.fas {
+	margin-left: 10px;
+	cursor: pointer;
+}
+/* ocultar boton slide y solo mostrar las 3 rayitas*/
+div.menuOculto button[name="gender"]{
+  display: none;
+}
+/* sacarle color azul de link a las 3 rayitas*/
+div.menuOculto a{
+  color: inherit;
+}
+/*diseño lista de generos*/
+div.menuOculto ul{
+
+}
+
+
 .columnas{
   display: flex;
   justify-content: center;
+  margin-left: 10%;
 }
 
 .populares{
