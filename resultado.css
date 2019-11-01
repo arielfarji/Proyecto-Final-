@@ -1,0 +1,8 @@
+section.resultados div.pelis{
+
+  justify-content: center;
+
+}
+section.resultados{
+  display:flex;
+}
