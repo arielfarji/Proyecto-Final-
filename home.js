@@ -53,6 +53,8 @@ var inputBuscador = document.querySelector(".buscadorsecundario");
 
 lupita.onclick = function() {
   inputBuscador.classList.toggle('inputHidden');
+  setTimeout(function() {inputBuscador.focus();}, 301)
+
 }
 //hasta aca.
 }

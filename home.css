@@ -65,6 +65,16 @@ div.menuOculto a{
 div.menuOculto ul{
 
 }
+/*sacarle color azul de link de filtro*/
+header a{
+  color: inherit;
+}
+/*sacarle color azul de link de filtro en hover*/
+header a:hover{
+  color: inherit;
+}
+
+/*form de busqueda avanzada*/
 
 
 .columnas{

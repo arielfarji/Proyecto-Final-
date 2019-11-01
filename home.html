@@ -1,85 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="home.css">
-    <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
-    <script src="home.js" charset="utf-8"></script>
-    <script
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="home.css">
+  <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <script src="home.js" charset="utf-8"></script>
+  <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="slick.css"/>
-    <script type="text/javascript" src="slick.min.js"></script>
-    <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <link rel="stylesheet" type="text/css" href="slick.css"/>
+  <script type="text/javascript" src="slick.min.js"></script>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-  </head>
-  <body>
-    <header>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+  <header>
     <form class="form-buscador" action="buscador.html" method="get">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
       <i class="fas fa-search" id="lupita"></i>
+      <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
     </form>
+
   </header>
   <div class="padre">
+
     <div class="menuOculto">
-
       <button type="button" name="gender">Slide</button>
+      <a href="#offcanvas-izquierdo" uk-toggle><i class="fas fa-bars"></i></a>
 
-<a href="#offcanvas-usage" uk-toggle><i class="fas fa-bars"></i></a>
-
-<div id="offcanvas-usage" uk-offcanvas>
-    <div class="uk-offcanvas-bar">
-
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-        <h2>Generos</h2>
-
-        <ul>
-          <li><a href=""> Hola</li>
-          <li><a href=""> Hola</li>
-          <li><a href=""> Hola</li>
-          <li><a href=""> Hola</li>
-        </ul>
+      <div id="offcanvas-izquierdo" uk-offcanvas>
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h2>Generos</h2>
+          <ul>
+            <li><a href="">Hola</a></li>
+            <li><a href="">Hola</a></li>
+            <li><a href="">Hola</a></li>
+            <li><a href="">Hola</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
-</div>
+
+    <div class="busquedaAvanzada">
+
+      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h2>Generos</h2>
+          <form class="" action="index.html" method="post">
+            <select class="opcionesGenero" name="">
+            <option value=""></option>
+            </select>
+            <select class="excluir" name="">
+              <option value=""></option>
+            </select>
+            <select class="orden" name="">
+              <option value=""></option>
+              rating bla
+            </select>
+            <select class="años" name="">
+              <option value=""></option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!--fin menu generos -->
-<section class="columnas">
-  <div class="populares">
+    <section class="columnas">
+      <div class="populares">
 
-       </div>
-       <div class="al-aire">
+      </div>
+      <div class="al-aire">
 
-       </div>
-       <div class="mayor-puntaje"></div>
-</section>
+      </div>
+      <div class="mayor-puntaje"></div>
+    </section>
   </div>
 
-<footer>
-  |<a class="head" href= "home.html">Home</a>|
-  <a class="head" href= "#">About</a>|
-  <a class="head" href="#">Contact</a>|
-</footer>
-  </body>
+  <footer>
+    |<a class="head" href= "home.html">Home</a>|
+    <a class="head" href= "#">About</a>|
+    <a class="head" href="#">Contact</a>|
+  </footer>
+</body>
 </html>
 
 <!-- Display flex
- height: 100vh
- <div class="padre">
+height: 100vh
+<div class="padre">
 
-  <div class="menuOculto menuOculto">
-    sdasdasdasd
-  </div>
-  <div class="container">
-    kjajdasdasjkhdashjkdashjkads
-  </div>
+<div class="menuOculto menuOculto">
+sdasdasdasd
+</div>
+<div class="container">
+kjajdasdasjkhdashjkdashjkads
+</div>
 
 </div>
