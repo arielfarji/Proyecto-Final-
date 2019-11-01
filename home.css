@@ -25,9 +25,17 @@ div.uk-slider-container{
 .contenedorcolumna img{
 }
 
+button#buscador {
+	color: black;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+/*
 i#buscador {
 	color: black;
 	position: absolute;
 	top: 5px;
 	right: 5px;
 }
+*/
