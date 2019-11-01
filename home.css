@@ -4,44 +4,21 @@ body{
   background-color: rgb(245, 234, 216);
 }
 
-.columnas{
-  margin-top: 10%;
-  margin-left: 25%;
-}
-
-.contenedorcolumna {
-  width: 50%;
-  margin-left: 50px;
-  display: flex; /*este y el de abajo ponen los circulos al costado*/
-  justify-content: space-between;
-  margin-bottom: 30px;
-
-}
-
-div.uk-slider-container{
-  display: flex;
-}
-
-.contenedorcolumna img{
-}
-
+/*
+ Buscador
+*/
 button#buscador {
 	color: black;
 }
 
-
-/*
- Buscador
-*/
-
-/*position a la derecha*/
+/*position a la derecha de la lupa*/
 form.form-buscador {
 	display: flex;
 	justify-content: flex-end;
 	padding: 10px;
 }
 
-/* cajita q deslice*/
+/* cajita q deslice de la lupa*/
 form.form-buscador .buscadorsecundario {
 	width: 200px;
 	height: 20px;
@@ -49,7 +26,7 @@ form.form-buscador .buscadorsecundario {
 	transition: all 0.3s ease-in-out;
 }
 
-/* q al pretar enter se envie sin mostrar botton*/
+/* q al pretar enter se envie sin mostrar botton de la lupa*/
 form.form-buscador button[type="submit"] {
 	display: none;
 }
@@ -60,8 +37,18 @@ form.form-buscador i.fas {
 	cursor: pointer;
 }
 
-/* q se esconda la cajita */
+/* q se esconda la cajita de la lupa */
 form.form-buscador .buscadorsecundario.inputHidden {
 	visibility: hidden;
 	width: 0px;
+}
+
+.columnas{
+  display: flex;
+  justify-content: space-between;
+}
+
+.columnas div{
+  width: 30%;
+  
 }
