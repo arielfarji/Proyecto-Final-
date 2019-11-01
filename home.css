@@ -57,3 +57,13 @@ form.form-buscador .buscadorsecundario.inputHidden {
 .mayor-puntaje{
   width: 30%;
 }
+
+.slick-slide img{
+  margin: 0 auto;
+}
+
+button.slick-prev, button.slick-next {
+  position: relative;
+left: 50%;
+transform: translateX(-50%);
+}
