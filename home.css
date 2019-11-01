@@ -27,15 +27,41 @@ div.uk-slider-container{
 
 button#buscador {
 	color: black;
-	position: absolute;
-	top: 5px;
-	right: 5px;
 }
+
+
 /*
-i#buscador {
-	color: black;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-}
+ Buscador
 */
+
+/*position a la derecha*/
+form.form-buscador {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+}
+
+/* cajita q deslice*/
+form.form-buscador .buscadorsecundario {
+	width: 200px;
+	height: 20px;
+	border-radius: 4px;
+	transition: all 0.3s ease-in-out;
+}
+
+/* q al pretar enter se envie sin mostrar botton*/
+form.form-buscador button[type="submit"] {
+	display: none;
+}
+
+/*q se ponga el pointer al pasar x la lupita y la separacion*/
+form.form-buscador i.fas {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+/* q se esconda la cajita */
+form.form-buscador .buscadorsecundario.inputHidden {
+	visibility: hidden;
+	width: 0px;
+}
