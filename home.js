@@ -32,11 +32,6 @@ window.onload = function () {
     /**donde dice src lo busco aparte y para poster es siempr el mismo*/
     /*si quiero poner el titulo de la peli abajo de la imagen, lo que tengo que hacer es una vez que cierro lo de img abro uno nuevo para un p y en ves de poner poster path pongo title porque respuesta.result lo tiene todo junto en series*/
 
-    $('.al-aire').slick({
-      vertical: true,
-      slidesToShow: 2,
-      slidesToScroll: 2
-    });
     $('.mayor-puntaje').slick({
       vertical: true,
       slidesToShow: 2,
