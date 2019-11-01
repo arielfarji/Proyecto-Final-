@@ -1,4 +1,20 @@
 window.onload = function () {
+//sliders columnas
+  $('.populares').slick({
+     vertical: true,
+     slidesToShow: 2,
+     slidesToScroll: 2
+   });
+   $('.al-aire').slick({
+     vertical: true,
+     slidesToShow: 2,
+     slidesToScroll: 2
+   });
+   $('.mayor-puntaje').slick({
+     vertical: true,
+     slidesToShow: 2,
+     slidesToScroll: 2
+   });
 
   $('.populares').slick({
     vertical: true,
