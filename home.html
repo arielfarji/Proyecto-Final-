@@ -20,9 +20,12 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
+    <h1>Veo Veo</h1>
     <form class="form-buscador" action="resultado.html" method="get">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
@@ -31,7 +34,8 @@
     </form>
 
   </header>
-  <div class="padre">
+<main class="padre">
+
 
     <div class="menuOculto">
       <button type="button" name="gender">Slide</button>
@@ -75,16 +79,17 @@
     </div>
 
     <!--fin menu generos -->
-    <section class="columnas">
-      <div class="populares">
 
-      </div>
-      <div class="al-aire">
+<section class="columnas">
+  <p class="titulo-populares">Populares</p>
+  <p class="titulo-al-aire">Al aire</p>
+  <p class="titulo-mayor-puntaje">Mayor puntaje</p>
+  <div class="populares"></div>
+  <div class="al-aire"></div>
+  <div class="mayor-puntaje"></div>
+</section>
 
-      </div>
-      <div class="mayor-puntaje"></div>
-    </section>
-  </div>
+  </main>
 
   <footer>
     |<a class="head" href= "home.html">Home</a>|

@@ -1,5 +1,6 @@
 window.onload = function () {
 
+/*Columna populares - inicio*/
   fetch("https://api.themoviedb.org/3/tv/popular?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
   .then(function(response) {
     return response.json();
@@ -19,13 +20,35 @@ window.onload = function () {
         autoplay: true
       });
     }, 200)
-
-
-
   }
 )
+/*Columna populares - fin*/
 
+/*Columna al-aire - inicio*/
+fetch("https://api.themoviedb.org/3/tv/on_the_air?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
+.then(function(response) {
+  return response.json();
+})
+.then(function(respuesta){
+  // console.log( respuesta.results[1].poster_path );
+  var series = respuesta.results;
+  for (var i = 0; i < series.length; i++) {
+    document.querySelector("div.al-aire").innerHTML += "<div><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></div>"
+  }
 
+  setTimeout(function() {
+    $('.al-aire').slick({
+      vertical: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      autoplay: true
+    });
+  }, 200)
+}
+)
+/*Columna al-aire - fin*/
+
+/*Columna mayor-puntajr - inicio*/
   fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
   .then(function(response) {
     return response.json();
@@ -45,14 +68,10 @@ window.onload = function () {
         slidesToScroll: 2,
         autoplay: true
       });
-
-
-
     }, 200)
-
   }
 )
-
+/*Columna mayor-puntajr - fin*/
 
 
 //modificar el click en la lupa para q aparezca lo oculto

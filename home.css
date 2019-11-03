@@ -4,9 +4,11 @@ body{
   background-color: rgb(50, 54, 57);
 }
 
-/*
- Buscador
-*/
+header h1{
+  color: red;
+  text-align: center;
+}
+/* Buscador*/
 button#buscador {
 	color: black;
 }
@@ -63,7 +65,16 @@ div.menuOculto a{
 }
 /*diseño lista de generos*/
 div.menuOculto ul{
-
+  font-family: 'Roboto', sans-serif;
+}
+div.menuOculto h2{
+  font-family: 'Zilla Slab', serif;
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.lista-generos li{
+  padding-bottom: 4px;
 }
 /*sacarle color azul de link de filtro*/
 header a{
@@ -76,7 +87,7 @@ header a:hover{
 
 /*form de busqueda avanzada*/
 
-
+/*Diseño columnas*/
 .columnas{
   display: flex;
   justify-content: center;
@@ -97,8 +108,48 @@ header a:hover{
   margin: 0 auto;
 }
 
+
+.titulo-populares {
+  position: absolute;
+  top: 4%;
+  left: 23%;
+  color: white;
+  font-size: 32px;
+  font-family: 'Zilla Slab', serif;
+  margin: 0 auto;
+}
+.titulo-al-aire {
+  position: absolute;
+  top: 4%;
+  left: 52%;
+  color: white;
+  font-size: 32px;
+  font-family: 'Zilla Slab', serif;
+  margin: 0 auto;
+}
+.titulo-mayor-puntaje {
+  position: absolute;
+  top: 4%;
+  left: 75%;
+  color: white;
+  font-size: 32px;
+  font-family: 'Zilla Slab', serif;
+  margin: 0 auto;
+}
+
+/*diseño de previous and next botones*/
 button.slick-prev, button.slick-next {
   position: relative;
-left: 50%;
-transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 13px;
+  margin-bottom: 13px;
+  background-color: #c6f01d;
+  border-radius: 42px;
+  border: 6px solid #c6f01d;
+  width: 35%;
+  height: 27px;
+  font-size: 13px;
+  color: rgb(50, 54, 57);
+  font-family: "Staatliches"
 }
