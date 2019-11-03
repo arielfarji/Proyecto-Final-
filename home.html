@@ -22,9 +22,10 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
+</head>
+
+<body>
+  <header>
     <h1>Veo Veo</h1>
     <form class="form-buscador" action="resultado.html" method="get">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
@@ -34,59 +35,72 @@
     </form>
 
   </header>
+
 <main class="padre">
 
+  <section>
+  <div class="menuOculto">
+    <button type="button" name="gender">Slide</button>
+    <a href="#offcanvas-izquierdo" uk-toggle><i class="fas fa-bars"></i></a>
 
-    <div class="menuOculto">
-      <button type="button" name="gender">Slide</button>
-      <a href="#offcanvas-izquierdo" uk-toggle><i class="fas fa-bars"></i></a>
+    <div id="offcanvas-izquierdo" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h2>Generos</h2>
+        <ul class="lista-generos">
 
-      <div id="offcanvas-izquierdo" uk-offcanvas>
-        <div class="uk-offcanvas-bar">
-          <button class="uk-offcanvas-close" type="button" uk-close></button>
-          <h2>Generos</h2>
-          <ul class="lista-generos">
-
-          </ul>
-        </div>
+        </ul>
       </div>
     </div>
+  </div>
+  </section>
 
-    <div class="busquedaAvanzada">
 
-      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
-        <div class="uk-offcanvas-bar">
-          <button class="uk-offcanvas-close" type="button" uk-close></button>
-          <h3>Busqueda avanzada</h3>
-          <form class="" action="index.html" method="post">
-            <select class="opcionesGenero" name="">
-              <p>Generos</p>
+  <section>
+  <div class="busquedaAvanzada">
+
+    <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h3>Busqueda avanzada</h3>
+        <form class="" action="index.html" method="post">
+          <select class="opcionesGenero" name="">
+            <p>Generos</p>
+          <option value=""></option>
+          </select>
+          <select class="excluir" name="">
             <option value=""></option>
-            </select>
-            <select class="excluir" name="">
-              <option value=""></option>
-            </select>
-            <select class="orden" name="">
-              <option value=""></option>
-              rating bla
-            </select>
-            <select class="años" name="">
-              <option value=""></option>
-            </select>
-          </form>
-        </div>
+          </select>
+          <select class="orden" name="">
+            <option value=""></option>
+            rating bla
+          </select>
+          <select class="años" name="">
+            <option value=""></option>
+          </select>
+        </form>
       </div>
     </div>
+  </div>
+  </section>
 
     <!--fin menu generos -->
 
 <section class="columnas">
-  <p class="titulo-populares">Populares</p>
-  <p class="titulo-al-aire">Al aire</p>
-  <p class="titulo-mayor-puntaje">Mayor puntaje</p>
-  <div class="populares"></div>
-  <div class="al-aire"></div>
-  <div class="mayor-puntaje"></div>
+  <article class="columna1">
+    <label class="titulo-populares">Populares</label>
+    <div class="populares"></div>
+  </article>
+
+  <article class="columna2">
+    <label class="titulo-al-aire">Al aire</label>
+    <div class="al-aire"></div>
+  </article>
+
+  <article class="columna3">
+    <label class="titulo-mayor-puntaje">Mayor puntaje</label>
+    <div class="mayor-puntaje"></div>
+  </article>
 </section>
 
   </main>

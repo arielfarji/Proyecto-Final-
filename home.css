@@ -1,9 +1,11 @@
-/*{box-sizing: border-box};*/
+*{box-sizing: border-box;}
 
 body{
   background-color: rgb(50, 54, 57);
 }
-
+header{
+  background-color: pink;
+}
 header h1{
   color: red;
   text-align: center;
@@ -51,7 +53,7 @@ div.menuOculto{
   margin-left: 6px;
 }
 /*q se ponga el pointer en las 3 rayitas*/
-div.padre i.fas {
+div.menuOculto i.fas { /*aca decia div.padre pero lo cambie HAY QUE FIJARSE SI SIGUE IGUAL PORQUE ANTES EN VEZ DE MAIN DECIA DIV*/
 	margin-left: 10px;
 	cursor: pointer;
 }
@@ -88,60 +90,43 @@ header a:hover{
 /*form de busqueda avanzada*/
 
 /*Diseño columnas*/
-.columnas{
+
+section.columnas{
   display: flex;
-  justify-content: center;
-  margin-left: 10%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: green;
+  text-align: -webkit-center;
 }
 
-.populares{
+.columnas article{
   width: 30%;
 }
-.al-aire{
-  width: 30%;
-}
-.mayor-puntaje{
-  width: 30%;
-}
-
-.slick-slide img{
-  margin: 0 auto;
-}
-
 
 .titulo-populares {
-  position: absolute;
-  top: 4%;
-  left: 23%;
   color: white;
   font-size: 32px;
   font-family: 'Zilla Slab', serif;
   margin: 0 auto;
+  margin-top: 10%;
 }
 .titulo-al-aire {
-  position: absolute;
-  top: 4%;
-  left: 52%;
   color: white;
   font-size: 32px;
   font-family: 'Zilla Slab', serif;
   margin: 0 auto;
+  margin-top: 10%;
 }
 .titulo-mayor-puntaje {
-  position: absolute;
-  top: 4%;
-  left: 75%;
   color: white;
   font-size: 32px;
   font-family: 'Zilla Slab', serif;
   margin: 0 auto;
+  margin-top: 10%;
 }
 
 /*diseño de previous and next botones*/
 button.slick-prev, button.slick-next {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   margin-top: 13px;
   margin-bottom: 13px;
   background-color: #c6f01d;
