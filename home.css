@@ -10,6 +10,8 @@ header h1{
   color: red;
   text-align: center;
 }
+
+
 /* Buscador*/
 button#buscador {
 	color: black;
@@ -48,35 +50,62 @@ form.form-buscador .buscadorsecundario.inputHidden {
 }
 
 /* menu generos a la izquierda */
-div.menuOculto{
+/*div.menuOculto{
   display: flex;
   margin-left: 6px;
 }
 /*q se ponga el pointer en las 3 rayitas*/
-div.menuOculto i.fas { /*aca decia div.padre pero lo cambie HAY QUE FIJARSE SI SIGUE IGUAL PORQUE ANTES EN VEZ DE MAIN DECIA DIV*/
-	margin-left: 10px;
+/*div.menuOculto i.fas { /*aca decia div.padre pero lo cambie HAY QUE FIJARSE SI SIGUE IGUAL PORQUE ANTES EN VEZ DE MAIN DECIA DIV*/
+/*	margin-left: 10px;
 	cursor: pointer;
-}
+}*/
+
 /* ocultar boton slide y solo mostrar las 3 rayitas*/
-div.menuOculto button[name="gender"]{
+/*div.menuOculto button[name="gender"]{
   display: none;
 }
 /* sacarle color azul de link a las 3 rayitas*/
-div.menuOculto a{
+/*div.menuOculto a{
   color: inherit;
+}*/
+
+.padre{
+  display: flex;
+  position: relative;
+  width: 100%;
 }
+
 /*diseño lista de generos*/
-div.menuOculto ul{
+.listadegeneros{
+  width: 20%;
+  position: absolute;
+  top: 14%;
+  left: 2%;
+
+}
+.listadegeneros ul{
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding-left: 40px;
 }
-div.menuOculto h2{
+.listadegeneros label{
+  color: white;
+  font-size: 25px;
   font-family: 'Zilla Slab', serif;
-  text-decoration: underline;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  margin-top: 10%;
 }
-.lista-generos li{
-  padding-bottom: 4px;
+
+ul.lista-generos li a:hover{
+  font-size: 18px;
+  color: #c6f01d;
+}
+ul.lista-generos li{
+  padding-bottom: 5px;
+}
+
+.listadegeneros ul a{
+  color: #F0F0F0;
 }
 /*sacarle color azul de link de filtro*/
 header a{
@@ -93,20 +122,36 @@ form select{
   height: 20px;
   border-radius: 8px;
 }
+
+
 /*Diseño columnas*/
 
 section.columnas{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: green;
   text-align: -webkit-center;
+  width: 80%;
+
 }
+
 
 .columnas article{
-  width: 30%;
+  width: 23%;
+}
+.columna1{
+position: relative;
+left: 23%;
 }
 
+.columna2{
+position: relative;
+left: 17%;
+}
+.columna3{
+position: relative;
+left: 11%;
+}
 .titulo-populares {
   color: white;
   font-size: 32px;

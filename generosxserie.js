@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
 
-  fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US")
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US")
   .then(function(response) {
     return response.json();
   })

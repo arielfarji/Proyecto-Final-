@@ -25,7 +25,7 @@ window.onload = function () {
 /*Columna populares - fin*/
 
 /*Columna al-aire - inicio*/
-fetch("https://api.themoviedb.org/3/tv/on_the_air?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
+fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
 .then(function(response) {
   return response.json();
 })
@@ -91,12 +91,6 @@ lupita.onclick = function() {
 
 
 
-
-// var columnas = document.querySelectorAll("div.uk-slider").innerHTML = function() {
-//   for (var i = 0; i < columna.length; i++) {
-//     columnas.style =
-//   }
-// };
 
 //modificar el click en la lupa
 // .onClick = function buscadorsecundario() {
