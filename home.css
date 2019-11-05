@@ -187,3 +187,15 @@ button.slick-prev, button.slick-next {
   color: rgb(50, 54, 57);
   font-family: "Staatliches"
 }
+
+footer{
+  position: relative;
+}
+/*tamaño img de footer logo tmdb*/
+footer img.TMDB {
+  position: absolute;
+  display: flex;
+  width: 6%;
+  right: 2px;
+  bottom: 2px;
+}
