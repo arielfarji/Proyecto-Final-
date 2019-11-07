@@ -114,6 +114,15 @@ form select{
   height: 20px;
   border-radius: 8px;
 }
+ form button{
+   width: 50%;
+   height: 20px;
+   border: none;
+   border-radius: 6px;
+   background-color: green;
+   margin-top: 25px;
+   margin-left: 40px;
+ }
 
 
 /*Diseño columnas*/
