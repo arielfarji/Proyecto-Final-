@@ -27,7 +27,7 @@ window.addEventListener("load", function (){
     return response.json();
   })
   .then(function(respuesta) {
-    document.querySelector("h1.title").innerText = nombreGenero// + Agregar nombre del genero
+    document.querySelector("h1.title").innerText = nombreGenero
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path == null) {
@@ -45,4 +45,5 @@ var inputBuscador = document.querySelector(".buscadorsecundario");
 
 lupita.onclick = function() {
 inputBuscador.classList.toggle('inputHidden');
+setTimeout(function() {inputBuscador.focus();}, 301)
 }
