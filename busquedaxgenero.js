@@ -18,7 +18,6 @@ window.addEventListener("load", function (){
       if(series[i].id == genero){
         nombreGenero = series[i].name
       }
-      document.querySelector("select.opcionesGenero").innerHTML += "<option>" + series[i].name + "</option>"
     }
   })
 
@@ -39,7 +38,7 @@ window.addEventListener("load", function (){
     }
   })
   // aca arranco desde aqui
-  
+
 })
 
 var lupita = document.querySelector("#lupita");
