@@ -84,11 +84,18 @@ lupita.onclick = function() {
 
 }
 //hasta aca.
-//busqueda sea valida y con mas de 3 caracteres
+//busqueda sea valida y con mas de 3 caracteres y desaparezca dps de 3s
 document.querySelector("form#busqueta").onsubmit = function (event) {
+
   if(document.querySelector("input.buscadorsecundario").value.length < 3) {
 event.preventDefault();
-    alert ("Al menos 3 letras");
+  document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
+    <a class="uk-alert-close" uk-close></a>
+    <p>Al menos 3 letras.</p>
+</div>`
+setTimeout(function(){
+  document.querySelector('.notificacion').style.display = 'none'
+}, 3000)
   }
   }
 

@@ -27,7 +27,7 @@ window.addEventListener("load", function (){
     return response.json();
   })
   .then(function(respuesta) {
-    document.querySelector("h1.title").innerText = nombreGenero// + Agregar nombre del genero
+    document.querySelector("h2.title").innerText = nombreGenero
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path == null) {
@@ -47,4 +47,20 @@ var inputBuscador = document.querySelector(".buscadorsecundario");
 
 lupita.onclick = function() {
 inputBuscador.classList.toggle('inputHidden');
+setTimeout(function() {inputBuscador.focus();}, 301)
 }
+
+//busqueda sea valida y con mas de 3 caracteres y desaparezca dps de 3s
+document.querySelector("form#busqueda").onsubmit = function (event) {
+
+  if(document.querySelector("input.buscadorsecundario").value.length < 3) {
+event.preventDefault();
+  document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
+    <a class="uk-alert-close" uk-close></a>
+    <p>Al menos 3 letras.</p>
+</div>`
+setTimeout(function(){
+  document.querySelector('.notificacion').style.display = 'none'
+}, 3000)
+  }
+  }

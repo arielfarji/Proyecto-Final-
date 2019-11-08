@@ -29,6 +29,9 @@
 </head>
 
 <body>
+  <div class="error">
+
+  </div>
   <header>
     <h1>Veo Veo</h1>
     <img src="logo.png" alt="">
@@ -72,7 +75,6 @@
   </div>
 </section>
 
-
   <section>
   <div class="busquedaAvanzada">
 
@@ -80,7 +82,7 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <h3>Busqueda avanzada</h3>
-        <form class="" action="index.html" method="post">
+        <form class="" action="resultadoavanzado.html" method="post">
           <p class="busqueda"> Genero: </p>
           <select class="opcionesGenero" name="">
           <option value=""></option>
@@ -92,12 +94,15 @@
           <br> <p class="busqueda"> Ordenar por: </p>
           <select class="orden" name="">
             <option value=""></option>
-            rating bla
+              <option value="vote_average.desc">Más votadas desc.</option>
+                <option value="vote_average.asc">Más votadas asc.</option>
+                  <option value="first_air_date.desc">Fecha estreno desc.</option>
+                    <option value="first_air_date.asc">Fecha estreno desc.</option>
+                      <option value="popularity.desc">Popularidad desc.</option>
+                        <option value="popularity.asc">Popularidad asc.</option>
           </select>
           <br> <p class="busqueda"> Año de estreno:</p>
-          <select class="años" name="">
-            <option value=""></option>
-          </select>
+            <input type="number" name="" value="first_air_date_year">
           <button type="submit" name="Buscar">Buscar</button>
         </form>
       </div>
@@ -128,7 +133,7 @@
 
   <footer>
     <img class="TMDB"src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="TMDB">
-    <label for="">Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro</label>
+  <label for+""> Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro </label>
   </footer>
 </body>
 </html>

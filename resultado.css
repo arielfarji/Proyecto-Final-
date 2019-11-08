@@ -61,7 +61,7 @@ section.resultados{
   padding-bottom: 100px;
 }
 
-h1.title { /*ESTO ES PARA LA PALABRA RESULTADO*/
+h2.title { /*ESTO ES PARA LA PALABRA RESULTADO*/
   width:100%;
   color: white;
   font-size: 20px;
@@ -73,6 +73,9 @@ div#busqueda{
 }
 div.uk-grid-margin{
   margin-top: 23px;
+}
+div#busqueda img:hover{
+  border: 2px solid yellow;
 }
 
 /*Titulo del genero*/
