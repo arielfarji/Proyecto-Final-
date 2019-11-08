@@ -27,5 +27,6 @@ window.onload = function() {
 
   lupita.onclick = function() {
     inputBuscador.classList.toggle('inputHidden');
+    setTimeout(function() {inputBuscador.focus();}, 301)
   }
 }
