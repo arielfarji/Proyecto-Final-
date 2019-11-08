@@ -42,24 +42,24 @@ form.form-buscador .buscadorsecundario.inputHidden {
 }
 
 /* menu generos a la izquierda */
-/*div.menuOculto{
+div.menuOculto{
   display: flex;
   margin-left: 6px;
 }
 /*q se ponga el pointer en las 3 rayitas*/
-/*div.menuOculto i.fas { /*aca decia div.padre pero lo cambie HAY QUE FIJARSE SI SIGUE IGUAL PORQUE ANTES EN VEZ DE MAIN DECIA DIV*/
-/*	margin-left: 10px;
+div.menuOculto i.fas { /*aca decia div.padre pero lo cambie HAY QUE FIJARSE SI SIGUE IGUAL PORQUE ANTES EN VEZ DE MAIN DECIA DIV*/
+	margin-left: 10px;
 	cursor: pointer;
-}*/
+}
 
 /* ocultar boton slide y solo mostrar las 3 rayitas*/
-/*div.menuOculto button[name="gender"]{
+div.menuOculto button[name="gender"]{
   display: none;
 }
 /* sacarle color azul de link a las 3 rayitas*/
-/*div.menuOculto a{
+div.menuOculto a{
   color: inherit;
-}*/
+}
 
 .padre{
   display: flex;
@@ -124,7 +124,7 @@ form input{
    height: 20px;
    border: none;
    border-radius: 6px;
-   background-color: green;
+   background-color: yellow;
    margin-top: 25px;
    margin-left: 40px;
  }
@@ -204,3 +204,9 @@ button.slick-prev, button.slick-next {
   color: rgb(50, 54, 57);
   font-family: "Staatliches"
 }
+
+/* @media only screen and (max-width: 600px) {
+  div.uk-offcanvas-bar {
+    display: none;
+  }
+} */
