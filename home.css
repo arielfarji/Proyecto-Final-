@@ -124,6 +124,17 @@ form select{
    margin-left: 40px;
  }
 
+ p.busqueda{
+   font-weight: bold;
+   font-family: 'Roboto', sans-serif;
+   margin-top: 15px;
+   margin-bottom: 2px;
+ }
+
+ div.busquedaAvanzada h3{
+   font-family: 'Zilla Slab', serif;
+ }
+
 
 /*Diseño columnas*/
 
