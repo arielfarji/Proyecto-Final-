@@ -84,6 +84,14 @@ lupita.onclick = function() {
 
 }
 //hasta aca.
+//busqueda sea valida y con mas de 3 caracteres
+document.querySelector("form#busqueta").onsubmit = function (event) {
+  if(document.querySelector("input.buscadorsecundario").value.length < 3) {
+event.preventDefault();
+    alert ("Al menos 3 letras");
+  }
+  }
+
 }
 
 
