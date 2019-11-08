@@ -16,9 +16,16 @@ header h1{
   padding-top: 20px;
   font-family: 'Bowlby One SC', cursive;
   position: relative;
-  left: 45%;
+  left: 39.5%;
+  word-spacing: 83px;
 }
+header img{
+  width: 5%;
+  position: absolute;
+  left: 47.5%;
+  top: 3.5%;
 
+}
 
 .fa-search{ /*estilo de la lupita*/
   position: absolute;
@@ -36,7 +43,7 @@ header h1{
   position: absolute;
   top: 7%;
   right: 4%;
-  color: pink;
+  color: yellow;
 }
 footer {
   background-color: rgb(50, 54, 57);

@@ -22,7 +22,7 @@ window.addEventListener("load", function (){
     }
   })
 
-   fetch(" https://api.themoviedb.org/3/discover/tv?api_key=a6f60714320c532cb6f1c6ddeef46bac&sort_by=popularity.desc&page=1&with_genres=" + genero)
+   fetch("https://api.themoviedb.org/3/discover/tv?api_key=a6f60714320c532cb6f1c6ddeef46bac&sort_by=popularity.desc&page=1&with_genres=" + genero)
   .then(function(response) {
     return response.json();
   })
@@ -38,6 +38,8 @@ window.addEventListener("load", function (){
 
     }
   })
+  // aca arranco desde aqui
+  
 })
 
 var lupita = document.querySelector("#lupita");
