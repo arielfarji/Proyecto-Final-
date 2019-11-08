@@ -4,11 +4,20 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="resultado.css">
-  <link rel="stylesheet" href="H&F.css">
+  <link rel="stylesheet" href="HyF.css">
+  <link rel="stylesheet" href="home.css">
   <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
+  <script src="busquedaAvanzada.js" charset="utf-8"></script>
   <!--Ulkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|Bowlby+One+SC&display=swap" rel="stylesheet">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
 
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 </head>
 <body>
   <header>
@@ -20,21 +29,55 @@
       <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
     </form>
   </header>
-<section>
-  <a class="head" href= "home.html">Pagina Principal</a>
-</section>
-  <section class="resultados">
-    <h1 class="title"></h1>
-    <div id="busqueda" class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid></div>
+  <main>
 
-  </section>
+    <section>
+    <div class="busquedaAvanzada">
+
+      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h3>Busqueda avanzada</h3>
+          <form class="" action="index.html" method="post">
+            Genero: <br>
+            <select class="opcionesGenero" name="">
+            <option value=""></option>
+            </select>
+            <br> Excluir: <br>
+            <select class="excluir" name="">
+              <option value=""></option>
+            </select>
+            <br> Ordenar por: <br>
+            <select class="orden" name="">
+              <option value=""></option>
+              rating bla
+            </select>
+            <br> Años: <br>
+            <select class="años" name="">
+              <option value=""></option>
+            </select>
+            <button type="submit" name="Buscar">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section>
+      <a class="head" href= "home.html">Pagina Principal</a>
+    </section>
+      <section class="resultados">
+        <h1 class="title"></h1>
+        <div id="busqueda" class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid></div>
+
+      </section>
+
+  </main>
 
 
   <footer>
     <img class="TMDB"src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="TMDB">
-    |<a class="head" href= "home.html">Home</a>|
-    <a class="head" href= "#">About</a>|
-    <a class="head" href="#">Contact</a>|
+    <label for="">Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro</label>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
