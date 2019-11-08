@@ -1,4 +1,7 @@
 *{box-sizing: border-box;}
+a.head{
+  color: yellow;
+}
 
 body{
   background-color: rgb(50, 54, 57);

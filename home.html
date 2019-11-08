@@ -31,7 +31,7 @@
 <body>
   <header>
     <h1>Veo Veo</h1>
-    <form class="form-buscador" action="resultado.html" method="get">
+    <form class="form-buscador" action="resultado.html" method="get" id="busqueta">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
       <i class="fas fa-search" id="lupita"></i>
@@ -80,20 +80,20 @@
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <h3>Busqueda avanzada</h3>
         <form class="" action="index.html" method="post">
-          Genero: <br>
+          <p class="busqueda"> Genero: </p>
           <select class="opcionesGenero" name="">
           <option value=""></option>
           </select>
-          <br> Excluir: <br>
+          <br><p class="busqueda"> Excluir: </p>
           <select class="excluir" name="">
             <option value=""></option>
           </select>
-          <br> Ordenar por: <br>
+          <br> <p class="busqueda"> Ordenar por: </p>
           <select class="orden" name="">
             <option value=""></option>
             rating bla
           </select>
-          <br> Años: <br>
+          <br> <p class="busqueda"> Año de estreno:</p>
           <select class="años" name="">
             <option value=""></option>
           </select>
