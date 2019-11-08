@@ -205,8 +205,14 @@ button.slick-prev, button.slick-next {
   font-family: "Staatliches"
 }
 
-/* @media only screen and (max-width: 600px) {
-  div.uk-offcanvas-bar {
+section.desktop { display: static }
+section.mobile { display: none }
+
+@media (max-width: 600px) {
+  section.desktop {
     display: none;
   }
-} */
+  section.mobile{
+    display: block;
+  }
+}
