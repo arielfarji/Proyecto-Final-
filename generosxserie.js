@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
     var series = respuesta.genres;
     for (var i = 0; i < series.length; i++) {
       document.querySelector("ul.lista-generos").innerHTML += "<li><a href=generosxserie.html?idGenero=" + series[i].id + ">" + series[i].name + "</a></li>"
+      document.querySelector(".menuOculto ul.lista-generos").innerHTML += "<li><a href=generosxserie.html?idGenero=" + series[i].id + ">" + series[i].name + "</a></li>"
     }
   })
 

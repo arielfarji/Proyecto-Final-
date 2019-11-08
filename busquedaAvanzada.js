@@ -22,4 +22,6 @@ window.addEventListener("load", function () {
       document.querySelector("select.excluir").innerHTML += "<option>" + series[i].name + "</option>"
     }
   })
+
+  //Agregar ordenar por y años.
 })
