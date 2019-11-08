@@ -114,6 +114,11 @@ form select{
   height: 20px;
   border-radius: 8px;
 }
+form input{
+  width: 80%;
+  height: 20px;
+  border-radius: 8px;
+}
  form button{
    width: 50%;
    height: 20px;

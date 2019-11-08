@@ -8,7 +8,7 @@ window.onload = function() {
     return response.json();
   })
   .then(function(respuesta) {
-    document.querySelector("h1.title").innerText = "Resultado de ''" + loBuscado + "''";
+    document.querySelector("h2.title").innerText = "Resultado de ''" + loBuscado + "''";
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path == null) {

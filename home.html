@@ -52,7 +52,7 @@
 
 </section>
 
-<!--menu oculoto para mobile creo LO DEJO PARA LAS MEDIA QUERY NO SE ASUSTEN :D --> 
+<!--menu oculoto para mobile creo LO DEJO PARA LAS MEDIA QUERY NO SE ASUSTEN :D -->
   <section>
   <div class="menuOculto">
 
@@ -79,7 +79,7 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <h3>Busqueda avanzada</h3>
-        <form class="" action="index.html" method="post">
+        <form class="" action="resultadoavanzado.html" method="post">
           <p class="busqueda"> Genero: </p>
           <select class="opcionesGenero" name="">
           <option value=""></option>
@@ -91,12 +91,15 @@
           <br> <p class="busqueda"> Ordenar por: </p>
           <select class="orden" name="">
             <option value=""></option>
-            rating bla
+              <option value="vote_average.desc">Más votadas desc.</option>
+                <option value="vote_average.asc">Más votadas asc.</option>
+                  <option value="first_air_date.desc">Fecha estreno desc.</option>
+                    <option value="first_air_date.asc">Fecha estreno desc.</option>
+                      <option value="popularity.desc">Popularidad desc.</option>
+                        <option value="popularity.asc">Popularidad asc.</option>
           </select>
           <br> <p class="busqueda"> Año de estreno:</p>
-          <select class="años" name="">
-            <option value=""></option>
-          </select>
+            <input type="number" name="" value="first_air_date_year">
           <button type="submit" name="Buscar">Buscar</button>
         </form>
       </div>

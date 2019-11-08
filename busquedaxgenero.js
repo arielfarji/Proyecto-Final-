@@ -27,7 +27,7 @@ window.addEventListener("load", function (){
     return response.json();
   })
   .then(function(respuesta) {
-    document.querySelector("h1.title").innerText = nombreGenero
+    document.querySelector("h2.title").innerText = nombreGenero
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path == null) {

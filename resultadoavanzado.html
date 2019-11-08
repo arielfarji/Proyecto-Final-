@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="resultado.css">
   <link rel="stylesheet" href="HyF.css">
   <link rel="stylesheet" href="home.css">
-  <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
   <script src="busquedaAvanzada.js" charset="utf-8"></script>
+  <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
   <!--Ulkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
@@ -29,55 +29,47 @@
       <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
     </form>
   </header>
-  <main>
 
-    <section>
-    <div class="busquedaAvanzada">
+  <section>
+  <div class="busquedaAvanzada">
 
-      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
-        <div class="uk-offcanvas-bar">
-          <button class="uk-offcanvas-close" type="button" uk-close></button>
-          <h3>Busqueda avanzada</h3>
-          <form class="" action="index.html" method="post">
-            Genero: <br>
-            <select class="opcionesGenero" name="">
+    <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h3>Busqueda avanzada</h3>
+        <form class="" action="resultadoavanzado.html" method="post">
+          Genero: <br>
+          <select class="opcionesGenero" name="">
+          <option value=""></option>
+          </select>
+          <br> Excluir: <br>
+          <select class="excluir" name="">
             <option value=""></option>
-            </select>
-            <br> Excluir: <br>
-            <select class="excluir" name="">
-              <option value=""></option>
-            </select>
-            <br> Ordenar por: <br>
-            <select class="orden" name="">
-              <option value=""></option>
-              <option value=""></option>
-                <option value="vote_average.desc">Más votadas desc.</option>
-                  <option value="vote_average.asc">Más votadas asc.</option>
-                    <option value="first_air_date.desc">Fecha estreno desc.</option>
-                      <option value="first_air_date.asc">Fecha estreno desc.</option>
-                        <option value="popularity.desc">Popularidad desc.</option>
-                          <option value="popularity.asc">Popularidad asc.</option>
-            </select>
-            <br> Años: <br>
-              <input type="number" name="" value="first_air_date_year">
-            <button type="submit" name="Buscar">Buscar</button>
-          </form>
-        </div>
+          </select>
+          <br> Ordenar por: <br>
+          <select class="orden" name="">
+            <option value=""></option>
+            rating bla
+          </select>
+          <br> Años: <br>
+          <select class="años" name="">
+            <option value=""></option>
+          </select>
+          <button type="submit" name="Buscar">Buscar</button>
+        </form>
       </div>
     </div>
-    </section>
+  </div>
+  </section>
 
-    <section>
-      <a class="head" href= "home.html">Pagina Principal</a>
-    </section>
-      <section class="resultados">
-        <h2 class="title"></h2>
-        <div id="busqueda" class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid></div>
+  <section class="backhome">
+  <a class="head" href= "home.html"><label for="">Pagina Principal</label></a>
+  </section>
 
-      </section>
-
-  </main>
-
+  <section class="resultados">
+    <h1 class="title"></h1>
+    <div id="busqueda" class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid></div>
+  </section>
 
   <footer>
     <img class="TMDB"src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="TMDB">
@@ -86,6 +78,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-  <script src="busquedaxgenero.js" charset="utf-8"></script>
+  <script src="resultado.js" charset="utf-8"></script>
 </body>
 </html>
