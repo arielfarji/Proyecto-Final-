@@ -27,22 +27,35 @@ header img{
 
 }
 
-.fa-search{ /*estilo de la lupita*/
+a.head{ /*palabra inicio*/
+  color: yellow;
+  font-size: 20px;
+  position: absolute;
+  right: 3%;
+  top: 6%;
+}
+input.buscadorsecundario{ /*position del buscador de la lupa*/
+  position: absolute;
+  right: 13%;
+  top: 7%;
+}
+input.inputHidden{ /*position del buscador de la lupa*/
+  position: absolute;
+  right: 13%;
+  top: 7%;
+}
+
+.fa-search{ /*estilo icono lupita*/
   position: absolute;
   top: 7%;
-  right: 7%;
+  right: 11%;
   color: yellow;
 }
-.inputHidden{ /*no me deja bajar el buscador*/
-  /* position: absolute;
-  top: 7%;
-  right: 4%; */
 
-}
-.fa-filter{
+.fa-filter{ /*estilo icono filtro*/
   position: absolute;
   top: 7%;
-  right: 4%;
+  right: 8%;
   color: yellow;
 }
 footer {

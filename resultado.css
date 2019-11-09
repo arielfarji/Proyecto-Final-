@@ -1,7 +1,5 @@
 *{box-sizing: border-box;}
-a.head{
-  color: yellow;
-}
+
 
 body{
   background-color: rgb(50, 54, 57);
@@ -61,10 +59,13 @@ section.resultados{
   padding-bottom: 100px;
 }
 
-h2.title { /*ESTO ES PARA LA PALABRA RESULTADO*/
+h2.title { /*ESTO ES PARA LA PALABRA DEL GENERO DESPUES DE LA BUSQUEDA*/
   width:100%;
-  color: white;
-  font-size: 20px;
+  color: #c6f01d;
+  font-size: 33px;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-family: 'Zilla Slab', serif;
 }
 
 div#busqueda{

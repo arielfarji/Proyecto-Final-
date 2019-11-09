@@ -22,13 +22,16 @@
 <body>
   <header>
     <h1>Veo Veo</h1>
-    <img src="logo.png" alt="">
+    <img src="logo.png" alt=""> 
     <form class="form-buscador" action="resultado.html" method="get">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
       <i class="fas fa-search" id="lupita"></i>
       <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
     </form>
+
+    <a class="head" href= "home.html"><label for="">Inicio</label></a>
+
   </header>
   <main>
 
@@ -39,7 +42,7 @@
         <div class="uk-offcanvas-bar">
           <button class="uk-offcanvas-close" type="button" uk-close></button>
           <h3>Busqueda avanzada</h3>
-          <form class="" action="index.html" method="post">
+          <form class="" action="resultadoavanzado.html" method="post">
             Genero: <br>
             <select class="opcionesGenero" name="">
             <option value=""></option>
@@ -68,9 +71,7 @@
     </div>
     </section>
 
-    <section>
-      <a class="head" href= "home.html">Pagina Principal</a>
-    </section>
+
       <section class="resultados">
         <h2 class="title"></h2>
         <div id="busqueda" class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid></div>

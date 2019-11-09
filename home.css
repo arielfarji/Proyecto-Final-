@@ -124,7 +124,7 @@ form input{
    height: 20px;
    border: none;
    border-radius: 6px;
-   background-color: yellow;
+   background-color: #c6f01d;
    margin-top: 25px;
    margin-left: 40px;
  }
@@ -158,16 +158,16 @@ section.columnas{
 }
 .columna1{
 position: relative;
-left: 12%;
+left: 17%;
 }
 
 .columna2{
 position: relative;
-left: 7.5%;
+left: 12.5%;
 }
 .columna3{
 position: relative;
-left: 4%;
+left: 9%;
 }
 .titulo-populares {
   color: white;
