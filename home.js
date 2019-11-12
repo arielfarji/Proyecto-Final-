@@ -9,7 +9,7 @@ window.onload = function () {
     // console.log( respuesta.results[1].poster_path );
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
-      document.querySelector("div.populares").innerHTML += "<div><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></div>"
+      document.querySelector("div.populares").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
     }
 
     setTimeout(function() {
@@ -33,7 +33,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=a6f60714320c532cb6f1
   // console.log( respuesta.results[1].poster_path );
   var series = respuesta.results;
   for (var i = 0; i < series.length; i++) {
-    document.querySelector("div.al-aire").innerHTML += "<div><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></div>"
+    document.querySelector("div.al-aire").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
   }
 
   setTimeout(function() {
@@ -57,7 +57,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=a6f60714320c532cb6f1
     // console.log( respuesta.results[1].poster_path );
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
-      document.querySelector("div.mayor-puntaje").innerHTML += "<div><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></div>"
+      document.querySelector("div.mayor-puntaje").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
     }
     /**donde dice src lo busco aparte y para poster es siempr el mismo*/
     /*si quiero poner el titulo de la peli abajo de la imagen, lo que tengo que hacer es una vez que cierro lo de img abro uno nuevo para un p y en ves de poner poster path pongo title porque respuesta.result lo tiene todo junto en series*/

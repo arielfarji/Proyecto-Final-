@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="home.css">
   <script src="busquedaAvanzada.js" charset="utf-8"></script>
   <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
+  
   <!--Ulkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
@@ -23,12 +24,12 @@
   <header>
     <h1>Veo Veo</h1>
     <img src="img/logo.png" alt="">
-    <form class="form-buscador" action="resultado.html" method="get">
-      <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
-      <button type="submit">Enviar</button>
-      <i class="fas fa-search" id="lupita"></i>
-      <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
-    </form>
+    <form class="form-buscador" action="resultado.html" method="get" id="busqueda">
+        <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
+        <button type="submit">Enviar</button>
+        <i class="fas fa-search" id="lupita"></i>
+        <a href="#offcanvas-derecho" uk-toggle><i class="fas fa-filter"></i></a>
+      </form>
 
     <a class="head" href= "home.html"><label for="">Inicio</label></a>
 
@@ -68,7 +69,11 @@
     </div>
   </div>
   </section>
+  <!-- div para la alerta de error -->
+    <div class="error">
 
+    </div>
+  <!-- div para avisar q no hay resultado-->
   <div class="noHay"></div>
   <section class="resultados">
     <h1 class="title"></h1>

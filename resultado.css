@@ -79,4 +79,8 @@ div#busqueda img:hover{
   border: 2px solid yellow;
 }
 
+h1.title{
+  color: gray;
+}
+
 /*Titulo del genero*/
