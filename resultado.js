@@ -1,4 +1,8 @@
 window.onload = function() {
+   // document.querySelector(".form-buscador button").addEventListener("click", function () {
+   //   alert("SUBMITIE")
+
+
   var datos = new URLSearchParams(location.search);
   var loBuscado = datos.get("buscadorsecundario");
   // console.log(loBuscado);
@@ -10,26 +14,25 @@ window.onload = function() {
    return response.json();
  })
  .then(function(respuesta) {
+   console.log(respuesta);
    document.querySelector("h2.title").innerText = "Resultado de ''" + loBuscado + "''";
    var series = respuesta.results;
    console.log(series);
    if (series != false) {
-     document.querySelector("h1.title").innerText = "Resultado de ''" + loBuscado + "''";
+     document.querySelector("h2.title").innerText = "Resultado de ''" + loBuscado + "''";
      for (var i = 0; i < series.length; i++) {
-       if(series[i].poster_path == null) {
-         document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
-      } else {
-        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></a></div>";
-       }
+      if(series[i].poster_path != null) {
+       document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></a></div>";
+      }
      }
    } else {
      console.log('entre')
 document.querySelector ("div.noHay").innerHTML += "<p>No se ha encontrado resultados</p>"
      }
  })
- .catch(function(error) {
-   alert("Error, perdon, vuelva mas tarde")
- })
+ // .catch(function(error) {
+ //   alert("Error, perdon, vuelva mas tarde")
+ // })
 
   var lupita = document.querySelector("#lupita");
   var inputBuscador = document.querySelector(".buscadorsecundario");
@@ -52,5 +55,5 @@ document.querySelector ("div.noHay").innerHTML += "<p>No se ha encontrado result
 }, 3000)
   }
     }
-
+// })
   }
