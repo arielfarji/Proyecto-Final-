@@ -29,7 +29,7 @@ window.addEventListener("load", function (){
     document.querySelector("h2.title").innerText = nombreGenero
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
-      if(series[i].poster_path == null) {
+      if(series[i].poster_path != null) {
         document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
       } else {
         document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></div>";
