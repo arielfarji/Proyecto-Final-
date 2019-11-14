@@ -1,5 +1,7 @@
 window.addEventListener("load", function () {
 
+  // URLSearchParams etc etc // el parametro a buscar se llama "idGenero"
+  // &with_genres=" + laVariable
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US")
   .then(function(response) {
     return response.json();
@@ -19,13 +21,13 @@ window.addEventListener("load", function () {
 document.querySelector("form#busqueda").onsubmit = function (event) {
 
   if(document.querySelector("input.buscadorsecundario").value.length < 3) {
-event.preventDefault();
-  document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
+    event.preventDefault();
+    document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
     <a class="uk-alert-close" uk-close></a>
     <p>Al menos 3 letras.</p>
-</div>`
-setTimeout(function(){
-  document.querySelector('.notificacion').style.display = 'none'
-}, 3000)
+    </div>`
+    setTimeout(function(){
+      document.querySelector('.notificacion').style.display = 'none'
+    }, 3000)
   }
-  }
+}
