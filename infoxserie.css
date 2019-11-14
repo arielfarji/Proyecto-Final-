@@ -6,14 +6,21 @@ body{
 }
 main.padre{
   position: relative;
+  margin-top: auto;
+  height: 600px;
+color: white;
 }
-
+a.head{
+  cursor:pointer;
+}
 h1.nombre {
   position: absolute;
       color: gray;
       top: -5px;
       left: 51%;
-}
+      font-family: 'Zilla Slab', serif;
+      color: white;
+    }
 
 div.poster{
 top: 40px;
@@ -24,51 +31,60 @@ width: 16%;
 
 p.fechaDeOrigen{
 position: absolute;
-top: 57px;
+top: 72px;
 left: 51%;
-color: gray;
+font-family: 'Roboto', sans-serif;
 }
 
 p.generosPertenecientes {
   position: absolute;
-  top: 80px;
+  top: 105px;
   left: 51%;
-  color: gray;
+font-family: 'Roboto', sans-serif;
 }
 
 p.lenguaje {
   position: absolute;
-  top: 102px;
+  top: 140px;
   left: 51%;
-  color: gray;
+font-family: 'Roboto', sans-serif;
 }
 
 p.sinopsis {
   position: absolute;
-  top: 128px;
+  top: 180px;
   left: 51%;
-  color: gray;
+font-family: 'Roboto', sans-serif;
 }
 
 p.trailer {
   position: absolute;
   top: 250px;
   left: 33%;
-  color: gray;
+font-family: 'Roboto', sans-serif;
+cursor: pointer;
 }
 
 button.lasRecomendaciones {
   position: absolute;
-  top: 181px;
+  top: 240px;
   left: 50%;
-  color: gray;
+font-family: 'Roboto', sans-serif;
+background: none;
+	border-radius:15px;
+	border:1px solid #f5e90e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:5px 14px;
+	text-decoration:none;
 }
 
 a.hearts {
   position: absolute;
-  top: 181px;
+  top: 240px;
   left: 65%;
-  color: gray;
+color: yellow;
 }
 /* Buscador*/
 button#buscador {
@@ -127,11 +143,7 @@ div.menuOculto a{
   color: inherit;
 }
 
-.padre{
-  display: flex;
-  position: relative;
-  width: 100%;
-}
+
 
 /*diseño lista de generos*/
 .listadegeneros{
