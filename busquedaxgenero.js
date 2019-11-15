@@ -30,7 +30,7 @@ window.addEventListener("load", function (){
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path != null) {
-        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></div>"
+        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></a></div>"
       } else {
         document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
       }

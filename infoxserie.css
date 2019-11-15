@@ -4,16 +4,23 @@ body{
   background-color: rgb(50, 54, 57);
 
 }
+
+div.trailers{
+  margin-left: 49%;
+margin-top: -8%;
+margin-bottom: 3%;
+}
 main.padre{
   display: flex;
   margin-top: auto;
-  height: 1050px;
+  height: 1100px;
 color: white;
 }
 
 div.losRecomendados{
   width: 58%;
 margin-left: 259px;
+display: none;
 }
 a.head{
   cursor:pointer;
@@ -24,16 +31,19 @@ div.infoParticular{
 }
 
 .ocultar{
-  display: none;
+  width: 58%;
+margin-left: 259px;
+  display: block;
+
 }
 div.recomendados{
 
 }
 div.datos{
-  margin-top: 13%;
+  margin-top: 5%;
   margin-left: -14%;
   font-family: 'Roboto', sans-serif;
-  width: 30%;
+  width: 50%;
 }
 
 h1.nombre {
@@ -44,7 +54,7 @@ h1.nombre {
 
 div.poster{
 width: 46%;
-margin-top: 13%;
+margin-top: 5%;
 margin-left: 19%;
 }
 

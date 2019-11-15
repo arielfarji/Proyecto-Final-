@@ -21,7 +21,7 @@ window.onload = function() {
      document.querySelector("h2.title").innerText = "Resultado de ''" + loBuscado + "''";
      for (var i = 0; i < series.length; i++) {
       if(series[i].poster_path != null) {
-       document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></a></div>";
+       document.querySelector("div#busquedas").innerHTML += "<div class='pelis'><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w300" + series[i].poster_path + "'></a></div>";
       }
      }
    } else {

@@ -90,13 +90,12 @@ var boton = document.querySelector('.lasRecomendaciones');
   for (var i = 0; i < imagenes.length; i++) {
     // console.log(document.querySelector(".recomendados"));
     if(imagenes[i].poster_path != null) {
-      divRecomendados.innerHTML += "<li><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></li>"
-    } else {
-      divRecomendados.innerHTML += "<li><img src='img/newError.jpeg'></li>";
+      divRecomendados.innerHTML += "<li><a href='infoxserie.html?id=" + imagenes[i].id + "'><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></a></li>"
     }
   }
 boton.onclick =  function() {
     document.querySelector("div.losRecomendados").classList.toggle("ocultar");
+    document.querySelector("div.losRecomendados").classList.toggle("losRecomendados");
   }
 }
 )
@@ -128,5 +127,19 @@ setTimeout(function(){
 }, 3000)
   }
   }
+
+  fetch("https://api.themoviedb.org/3/tv/"+idBuscado+"/videos?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(trai) {
+var  trailer = trai.results;
+  document.querySelector("iframe").src += trailer[0].key
+  }
+)
+  .catch(function(error) {
+    console.log(error);
+    alert("Error, perdon, vuelva mas tarde")
+  })
 
 }

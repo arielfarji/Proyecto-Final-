@@ -20,7 +20,7 @@ window.onload = function() {
         return response.json();
       })
       .then(function(serie) {
-        document.querySelector(".padrefav ul").innerHTML += "<li><h3><a href=infoxserie.html?idBuscado=" + ">" + serie.name + "</a></h3><img src=http://image.tmdb.org/t/p/w200" + serie.poster_path + "></li>";
+        document.querySelector(".padrefav ul").innerHTML += "<li><h3><a href=infoxserie.html?id=" + serie.id + ">" + serie.name + "</a></h3><img src=http://image.tmdb.org/t/p/w200" + serie.poster_path + "></li>";
       })
   }
 }
