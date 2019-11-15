@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="HyF.css">
   <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
@@ -10,7 +12,7 @@
   <script src="seriesxgenero.js" charset="utf-8"></script>
   <script src="home.js" charset="utf-8"></script>
   <script src="busquedaAvanzada.js" charset="utf-8"></script>
-  <script src="busquedaxgenero.js" charset="utf-8"></script>
+
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -20,23 +22,23 @@
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|Bowlby+One+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|Bowlby+One+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<!-- div para la alerta de error -->
+  <!-- div para la alerta de error -->
   <div class="error">
 
   </div>
   <header>
     <h1>Veo Veo</h1>
     <img src="img/logo.png" alt="">
-  <form class="form-buscador" action="resultado.html" method="get" id="busqueda">
+    <form class="form-buscador" action="resultado.html" method="get" id="busqueda">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
       <i class="fas fa-search" id="lupita"></i>
@@ -47,120 +49,255 @@
 
   </header>
 
-<main class="padre">
+  <main class="padre">
 
-<section class="listadegeneros desktop">
-<label for="">Generos</label>
-<div class="">
-  <ul class="lista-generos">
-
-  </ul>
-</div>
-
-</section>
-
-<!--menu oculoto para mobile creo LO DEJO PARA LAS MEDIA QUERY NO SE ASUSTEN :D -->
-  <section class= "mobile">
-  <div class="menuOculto">
-
-    <button type="button" name="gender">Slide</button>
-    <a href="#offcanvas-izquierdo" uk-toggle><i class="fas fa-bars"></i></a>
-
-    <div id="offcanvas-izquierdo" uk-offcanvas>
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <h2>Generos</h2>
+    <section class="listadegeneros desktop">
+      <label for="">Generos</label>
+      <div class="">
         <ul class="lista-generos">
 
         </ul>
       </div>
-    </div>
-  </div>
-</section>
 
-  <section>
-  <div class="busquedaAvanzada">
+    </section>
 
-    <div id="offcanvas-derecho" uk-offcanvas="flip: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <h3>Busqueda avanzada</h3>
-        <form class="form-avanzado" action="resultadoavanzado.html" method="get">
-          <p class="busqueda"> Genero: </p>
-          <select class="opcionesGenero" name="genero">
-          <option value=""></option>
-          </select>
-          <br><p class="busqueda"> Excluir: </p>
-          <select class="excluir" name="excluir">
-            <option value=""></option>
-          </select>
-          <br> <p class="busqueda"> Ordenar por: </p>
-          <select class="orden" name="orden">
-            <option value=""></option>
-              <option value="vote_average.desc">Más votadas desc.</option>
-                <option value="vote_average.asc">Más votadas asc.</option>
-                  <option value="first_air_date.desc">Fecha estreno desc.</option>
-                    <option value="first_air_date.asc">Fecha estreno asc.</option>
-                      <option value="popularity.desc">Popularidad desc.</option>
-                        <option value="popularity.asc">Popularidad asc.</option>
-          </select>
-          <br> <p class="busqueda"> Año de estreno:</p>
-            <input type="number" name="year" value="first_air_date_year">
-          <button type="submit" name="Buscar">Buscar</button>
-        </form>
+    <!--menu oculoto para mobile creo LO DEJO PARA LAS MEDIA QUERY NO SE ASUSTEN :D -->
+
+    <section class="mobile">
+      <div class="menuOculto">
+
+        <button type="button" name="gender">Slide</button>
+        <a href="#offcanvas-izquierdo" uk-toggle><i class="fas fa-bars"></i></a>
+
+        <div id="offcanvas-izquierdo" uk-offcanvas>
+          <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h2>Generos</h2>
+            <ul class="lista-generos">
+
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  </section>
+    </section>
+
+    <section>
+      <div class="busquedaAvanzada">
+
+        <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+          <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h3>Busqueda avanzada</h3>
+            <form class="form-avanzado" action="resultadoavanzado.html" method="get">
+              <p class="busqueda"> Genero: </p>
+              <select class="opcionesGenero" name="genero">
+                <option value=""></option>
+              </select>
+              <br><p class="busqueda"> Excluir: </p>
+              <select class="excluir" name="excluir">
+                <option value=""></option>
+              </select>
+              <br> <p class="busqueda"> Ordenar por: </p>
+              <select class="orden" name="orden">
+                <option value=""></option>
+                <option value="vote_average.desc">Más votadas desc.</option>
+                <option value="vote_average.asc">Más votadas asc.</option>
+                <option value="first_air_date.desc">Fecha estreno desc.</option>
+                <option value="first_air_date.asc">Fecha estreno asc.</option>
+                <option value="popularity.desc">Popularidad desc.</option>
+                <option value="popularity.asc">Popularidad asc.</option>
+              </select>
+              <br> <p class="busqueda"> Año de estreno:</p>
+              <input type="number" name="year" value="first_air_date_year">
+              <button type="submit" name="Buscar">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--fin menu generos -->
 
-<!--slider para mobile -->
-<section class="slider mobile">
-  <article class="slider1">
-    <label class="titulo">Populares</label>
-    <div class="populares-mobile">
+    <!--slider para mobile -->
+  <div class="contenedorSliders">
+    <section class="sliderMobile">
+      <div class="uk-position-relative uk-visible-toggle uk-light mobile slider" tabindex="-1" uk-slider="sets: true">
+          <h3>Populares</h3>
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+          </li>
+        </ul>
 
-    </div>
-  </article>
-  <article class="slider2">
-    <label class="titulo">Al aire</label>
-    <div class="populares-mobile">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
-    </div>
-  </article>
-  <article class="slider3">
-    <label class="titulo">Mayor puntaje</label>
-    <div class="populares-mobile">
+      </div>
+    </section>
+    <section  class="sliderMobile">
+      <div class="uk-position-relative uk-visible-toggle uk-light mobile slider" tabindex="-1" uk-slider="sets: true">
+          <h3>Al aire</h3>
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+          </li>
+        </ul>
 
-    </div>
-  </article>
-</section>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
-<!-- Fin slider mobile -->
+      </div>
+    </section>
+    <section  class="sliderMobile">
+      <div class="uk-position-relative uk-visible-toggle uk-light mobile slider" tabindex="-1" uk-slider="sets: true">
+          <h3>Mayor puntaje</h3>
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+          </li>
+          <li>
+            <img src="img/noImage.jpg" alt="">
+            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+          </li>
+        </ul>
 
-<section class="columnas desktop">
-  <article class="columna1">
-    <label class="titulo-populares">Populares</label>
-    <div class="populares"></div>
-  </article>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
-  <article class="columna2">
-    <label class="titulo-al-aire">Al aire</label>
-    <div class="al-aire"></div>
-  </article>
+      </div>
+    </section>
+  </div>
+    <!-- Fin slider mobile -->
 
-  <article class="columna3">
-    <label class="titulo-mayor-puntaje">Mayor puntaje</label>
-    <div class="mayor-puntaje"></div>
-  </article>
-</section>
+    <section class="columnas desktop">
+      <article class="columna1">
+        <label class="titulo-populares">Populares</label>
+        <div class="populares"></div>
+      </article>
+
+      <article class="columna2">
+        <label class="titulo-al-aire">Al aire</label>
+        <div class="al-aire"></div>
+      </article>
+
+      <article class="columna3">
+        <label class="titulo-mayor-puntaje">Mayor puntaje</label>
+        <div class="mayor-puntaje"></div>
+      </article>
+    </section>
 
   </main>
 
   <footer>
     <img class="TMDB"src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="TMDB">
-  <label for+""> Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro </label>
+    <label for+""> Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro </label>
   </footer>
 </body>
 

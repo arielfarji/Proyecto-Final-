@@ -34,7 +34,7 @@ window.addEventListener("load", function() {
   .then(function(response) {
     return response.json();
   })
-  .then(function(resp\uesta){
+  .then(function(respuesta){
     console.log(respuesta);
     var series = respuesta.results;
     document.querySelector("h2.title").innerText = "Resultado de la busqueda avanzada";

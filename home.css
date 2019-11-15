@@ -197,6 +197,17 @@ button.slick-prev, button.slick-next {
   color: rgb(50, 54, 57);
   font-family: "Staatliches"
 }
+section.mobile{
+  margin-left: 20px;
+  width: 80%;
+}
+section.mobile a{
+  margin-right: 10px;
+}
+
+.mobile {
+  display: none;
+}
 
 /* diseño mobile */
 section.desktop { display: static }
@@ -206,7 +217,22 @@ section.mobile { display: none }
   section.desktop {
     display: none;
   }
-  section.mobile{
+  section.mobile, .mobile{
     display: block;
+  }
+  .padre{
+    display: inherit;
+    width: 90%;
+  }
+  .sliderMobile{
+  margin-left: 20px;
+  }
+  .sliderMobile h3{
+    text-align: left;
+  }
+  .contenedorSliders{
+    width: 95%;
+    margin-left: 10%;
+    margin-top: 0%;
   }
 }
