@@ -83,22 +83,21 @@ fetch("https://api.themoviedb.org/3/tv/"
   return response.json();
 })
 .then(function(recomen) {
-  var imagenes = recomen.results;
+var imagenes = recomen.results;
 var divRecomendados = document.querySelector(".recomendados")
 var boton = document.querySelector('.lasRecomendaciones');
 
   for (var i = 0; i < imagenes.length; i++) {
     // console.log(document.querySelector(".recomendados"));
     if(imagenes[i].poster_path != null) {
-      divRecomendados.innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></div>"
+      divRecomendados.innerHTML += "<li><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></li>"
     } else {
-      divRecomendados.innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
+      divRecomendados.innerHTML += "<li><img src='img/newError.jpeg'></li>";
     }
   }
-  boton.onclick =  function() {
-    divRecomendados.classList.toggle("ocultar");
+boton.onclick =  function() {
+    document.querySelector("div.losRecomendados").classList.toggle("ocultar");
   }
-
 }
 )
 .catch(function(error) {

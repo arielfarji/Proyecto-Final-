@@ -7,8 +7,13 @@ body{
 main.padre{
   display: flex;
   margin-top: auto;
-  height: 600px;
+  height: 1050px;
 color: white;
+}
+
+div.losRecomendados{
+  width: 58%;
+margin-left: 259px;
 }
 a.head{
   cursor:pointer;
@@ -21,10 +26,12 @@ div.infoParticular{
 .ocultar{
   display: none;
 }
+div.recomendados{
 
+}
 div.datos{
   margin-top: 13%;
-  margin-left: 3%;
+  margin-left: -14%;
   font-family: 'Roboto', sans-serif;
 }
 
