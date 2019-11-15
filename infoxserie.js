@@ -4,6 +4,45 @@ var query = new URLSearchParams(location.search)
 
 var idBuscado = query.get('id')
 
+var recuperoStorage = localStorage.getItem("seriesFavoritas");
+
+// Si todavía no tenía gifs favoritos
+if (recuperoStorage == null) {
+  // Creo una lista vacia
+  seriesFavoritas = [];
+} else {
+  // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+  seriesFavoritas = JSON.parse(recuperoStorage);
+}
+
+// Lo que va a pasar con el boton si el usuario YA TENIA la serie como fav
+if (seriesFavoritas.includes(idBuscado)) { //CAMBIAR ESTO
+  document.querySelector("a.hearts svg path").style.fill = "yellow"; //como la imagen adentro tiene un svg y adentro un path (donde se le pasa el estilo)
+}
+
+document.querySelector("a.hearts").onclick = function(e) { //evento donde hago click
+
+  e.preventDefault()
+  //Paso 2: Modificar la informacion
+  // Si el gif ya era favorito
+  if (seriesFavoritas.includes(idBuscado)) { //CAMBIAR ESTO
+    // Lo quito
+    var index = seriesFavoritas.indexOf(idBuscado); //CAMBIAR ESTO
+    seriesFavoritas.splice(index, 1);
+    document.querySelector("a.hearts svg path").style.fill = "rgba(255,255,255,0)";
+  } else {
+    //Lo agrego
+    seriesFavoritas.push(idBuscado); //CAMBIAR ESTO
+    document.querySelector("a.hearts svg path").style.fill = "yellow";
+  }
+
+
+  //Paso 3: Escribir en storage
+  var infoParaStorage = JSON.stringify(seriesFavoritas);
+  localStorage.setItem("seriesFavoritas", infoParaStorage);
+
+}
+
 fetch("https://api.themoviedb.org/3/tv/"+idBuscado+"?api_key=a6f60714320c532cb6f1c6ddeef46bac")
 .then(function(response) {
   return response.json();
