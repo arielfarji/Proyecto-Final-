@@ -18,16 +18,16 @@ window.addEventListener("load", function () {
 })
 
 //busqueda sea valida y con mas de 3 caracteres y desaparezca dps de 3s
-// document.querySelector("form#busqueda").onsubmit = function (event) {
-//
-//   if(document.querySelector("input.buscadorsecundario").value.length < 3) {
-//     event.preventDefault();
-//     document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
-//     <a class="uk-alert-close" uk-close></a>
-//     <p>Al menos 3 letras.</p>
-//     </div>`
-//     setTimeout(function(){
-//       document.querySelector('.notificacion').style.display = 'none'
-//     }, 3000)
-//   }
-// }
+document.querySelector("form#busqueda").onsubmit = function (event) {
+
+  if(document.querySelector("input.buscadorsecundario").value.length < 3) {
+event.preventDefault();
+  document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
+    <a class="uk-alert-close" uk-close></a>
+    <p>Al menos 3 letras.</p>
+</div>`
+setTimeout(function(){
+  document.querySelector('.notificacion').style.display = 'none'
+}, 3000)
+  }
+ }
