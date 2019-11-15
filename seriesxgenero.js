@@ -14,6 +14,19 @@ window.addEventListener("load", function () {
       document.querySelector(".menuOculto ul.lista-generos").innerHTML += "<li><a href=seriesxgenero.html?idGenero=" + series[i].id + ">" + series[i].name + "</a></li>"
     }
   })
+  //busqueda sea valida y con mas de 3 caracteres y desaparezca dps de 3s
+  document.querySelector("form#busqueda").onsubmit = function () {
+    if(document.querySelector("input.buscadorsecundario").value.length < 3) {
+  event.preventDefault();
+    document.querySelector('.error').innerHTML += `<div class="uk-alert-danger notificacion" uk-alert>
+      <a class="uk-alert-close" uk-close></a>
+      <p>Al menos 3 letras.</p>
+  </div>`
+  setTimeout(function(){
+    document.querySelector('.notificacion').style.display = 'none'
+  }, 3000)
+    }
+   }
 
 
 
