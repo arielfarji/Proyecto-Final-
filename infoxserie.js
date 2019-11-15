@@ -48,40 +48,34 @@ fetch("https://api.themoviedb.org/3/tv/"+idBuscado+"?api_key=a6f60714320c532cb6f
   return response.json();
 })
 .then(function(serie){
-
+  console.log(serie);
 //nombre de la serie
   document.querySelector('.nombre').innerHTML = serie.name
   //fecha de la serie
-document.querySelector('.fechaDeOrigen').innerHTML = "Fecha: " + serie.first_air_name
+document.querySelector('.fechaDeOrigen').innerHTML = "<strong>Fecha: </strong>" + serie.first_air_date
   //los generos [esta diferente xq venia en un Array]
+document.querySelector('.generosPertenecientes').innerHTML += "<strong>Genero: </strong>"
   for (var i = 0; i < serie.genres.length; i++) {
 //si ya es igual a la cantidad de generos no poner comas
     if(i == serie.genres.length - 1){
-    document.querySelector('.generosPertenecientes').innerHTML += serie.genres[i].name
+    document.querySelector('.generosPertenecientes').innerHTML += "<a href=seriesxgenero.html?idGenero="+serie.genres[i].id+">" + serie.genres[i].name
   }
 //agregarle una coma dps de cada genero
   else{
-    document.querySelector('.generosPertenecientes').innerHTML += serie.genres[i].name + ', '
+    document.querySelector('.generosPertenecientes').innerHTML += "<a href=seriesxgenero.html?idGenero="+serie.genres[i].id+">" + serie.genres[i].name + ', ' + "</a>"
   }
 }
 //lenguaje de la serie
-document.querySelector('.lenguaje').innerHTML = "Lenguaje: " + serie.original_language
+document.querySelector('.lenguaje').innerHTML = "<strong>Lenguaje:</strong> " + serie.original_language
 //sinopsis
-document.querySelector('.sinopsis').innerHTML = serie.overview
+document.querySelector('.sinopsis').innerHTML = "<strong>Sinopsis: </strong>" + serie.overview
+
+
+document.querySelector('.poster img').src = 'http://image.tmdb.org/t/p/w300' + serie.poster_path
 })
 
-//poster de la serie
-fetch ("https://api.themoviedb.org/3/tv/"+idBuscado+"/images?api_key=a6f60714320c532cb6f1c6ddeef46bac")
-.then(function(response) {
-  return response.json();
-})
-.then(function(fotoDeLaSerie){
-//foto del poster
-for (var i = 0; i < fotoDeLaSerie.length; i++) {
-  document.querySelector("div.poster").innerHTML += "<img src='http://image.tmdb.org/t/p/w200" + fotoDeLaSerie[i].poster.file_path + "'>"
-}
-})
 
+var fotos = "";
 //recomendaciones de la series
 fetch("https://api.themoviedb.org/3/tv/"
 +idBuscado+"/recommendations?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
@@ -89,12 +83,26 @@ fetch("https://api.themoviedb.org/3/tv/"
   return response.json();
 })
 .then(function(recomen) {
-for (var i = 0; i < recomen.length; i++) {
-  document.querySelector(".lasRecomendaciones").submit = recomen[i].poster_path
-}
+  var imagenes = recomen.results;
+var divRecomendados = document.querySelector(".recomendados")
+var boton = document.querySelector('.lasRecomendaciones');
+
+  for (var i = 0; i < imagenes.length; i++) {
+    // console.log(document.querySelector(".recomendados"));
+    if(imagenes[i].poster_path != null) {
+      divRecomendados.innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></div>"
+    } else {
+      divRecomendados.innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
+    }
   }
+  boton.onclick =  function() {
+    divRecomendados.classList.toggle("ocultar");
+  }
+
+}
 )
 .catch(function(error) {
+  console.log(error);
   alert("Error, perdon, vuelva mas tarde")
 })
 

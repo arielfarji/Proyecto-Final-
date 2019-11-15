@@ -18,6 +18,10 @@ div.infoParticular{
   display:flex;
 }
 
+.ocultar{
+  display: none;
+}
+
 div.datos{
   margin-top: 13%;
   margin-left: 3%;
