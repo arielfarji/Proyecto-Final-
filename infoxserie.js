@@ -17,10 +17,10 @@ if (recuperoStorage == null) {
 
 // Lo que va a pasar con el boton si el usuario YA TENIA la serie como fav
 if (seriesFavoritas.includes(idBuscado)) {
-  document.querySelector("a.hearts svg path").style.fill = "yellow"; //como la imagen adentro tiene un svg y adentro un path (donde se le pasa el estilo)
+  document.querySelector("a.favs svg path").style.fill = "yellow"; //como la imagen adentro tiene un svg y adentro un path (donde se le pasa el estilo)
 }
 
-document.querySelector("a.hearts").onclick = function(e) { //evento donde hago click
+document.querySelector("a.favs").onclick = function(e) { //evento donde hago click
 
   e.preventDefault()
   //Paso 2: Modificar la informacion
@@ -29,11 +29,11 @@ document.querySelector("a.hearts").onclick = function(e) { //evento donde hago c
     // Lo quito
     var index = seriesFavoritas.indexOf(idBuscado); //CAMBIAR ESTO
     seriesFavoritas.splice(index, 1);
-    document.querySelector("a.hearts svg path").style.fill = "rgba(255,255,255,0)";
+    document.querySelector("a.favs svg path").style.fill = "rgba(255,255,255,0)";
   } else {
     //Lo agrego
     seriesFavoritas.push(idBuscado);
-    document.querySelector("a.hearts svg path").style.fill = "yellow";
+    document.querySelector("a.favs svg path").style.fill = "yellow";
   }
 
 
