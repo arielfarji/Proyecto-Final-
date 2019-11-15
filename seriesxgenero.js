@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
     }
   })
 
-})
+
 
 //busqueda sea valida y con mas de 3 caracteres y desaparezca dps de 3s
 document.querySelector("form#busqueda").onsubmit = function (event) {
@@ -31,3 +31,4 @@ setTimeout(function(){
 }, 3000)
   }
  }
+})

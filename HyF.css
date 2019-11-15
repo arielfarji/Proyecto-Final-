@@ -7,55 +7,43 @@ body{
 header{
   background-color: rgba(74, 78, 82);
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  height: 110px;
   justify-content: space-between;
 }
 header h1{
   color: yellow;
   font-size: 50px;
-  padding-top: 20px;
+  text-align: center;
   font-family: 'Bowlby One SC', cursive;
-  position: relative;
-  left: 39.5%;
-  word-spacing: 83px;
+  margin: 0;
 }
 header img{
-  width: 5%;
-  position: absolute;
-  left: 47.5%;
-  top: 3.5%;
-
+  width: 10%;
+  margin: 0 15px;
+}
+header form.form-buscador{
+  display: flex;
+  align-items: center;
 }
 
 a.head{ /*palabra inicio*/
   color: yellow;
   font-size: 20px;
-  position: absolute;
-  left: 2%;
-  top: 6%;
+  margin-left: 15px;
 }
 input.buscadorsecundario{ /*position del buscador de la lupa*/
-  position: absolute;
-  right: 13%;
-  top: 7%;
+
 }
 input.inputHidden{ /*position del buscador de la lupa*/
-  position: absolute;
-  right: 13%;
-  top: 7%;
+
 }
 
 .fa-search{ /*estilo icono lupita*/
-  position: absolute;
-  top: 7%;
-  right: 11%;
   color: yellow;
 }
 
 .fa-filter{ /*estilo icono filtro*/
-  position: absolute;
-  top: 7%;
-  right: 8%;
   color: yellow;
 }
 footer {
