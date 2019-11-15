@@ -13,7 +13,7 @@ fetch("https://api.themoviedb.org/3/tv/"+idBuscado+"?api_key=a6f60714320c532cb6f
 //nombre de la serie
   document.querySelector('.nombre').innerHTML = serie.name
   //fecha de la serie
-document.querySelector('.fechaDeOrigen').innerHTML = serie.first_air_name
+document.querySelector('.fechaDeOrigen').innerHTML = "Fecha: " + serie.first_air_name
   //los generos [esta diferente xq venia en un Array]
   for (var i = 0; i < serie.genres.length; i++) {
 //si ya es igual a la cantidad de generos no poner comas
@@ -26,10 +26,11 @@ document.querySelector('.fechaDeOrigen').innerHTML = serie.first_air_name
   }
 }
 //lenguaje de la serie
-document.querySelector('.lenguaje').innerHTML = serie.original_language
+document.querySelector('.lenguaje').innerHTML = "Lenguaje: " + serie.original_language
 //sinopsis
 document.querySelector('.sinopsis').innerHTML = serie.overview
 })
+
 //poster de la serie
 fetch ("https://api.themoviedb.org/3/tv/"+idBuscado+"/images?api_key=a6f60714320c532cb6f1c6ddeef46bac")
 .then(function(response) {
@@ -43,12 +44,15 @@ for (var i = 0; i < fotoDeLaSerie.length; i++) {
 })
 
 //recomendaciones de la series
-fetch("https://api.giphy.com/v1/gifs/trending?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU&limit=25&rating=G")
+fetch("https://api.themoviedb.org/3/tv/"
++idBuscado+"/recommendations?api_key=a6f60714320c532cb6f1c6ddeef46bac&language=en-US&page=1")
 .then(function(response) {
   return response.json();
 })
-.then(function(respuesta) {
-
+.then(function(recomen) {
+for (var i = 0; i < recomen.length; i++) {
+  document.querySelector(".lasRecomendaciones").submit = recomen[i].poster_path
+}
   }
 )
 .catch(function(error) {

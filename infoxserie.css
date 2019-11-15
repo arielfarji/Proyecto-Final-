@@ -13,55 +13,27 @@ color: white;
 a.head{
   cursor:pointer;
 }
-h1.nombre {
 
+div.infoParticular{
+  display:flex;
+}
+
+div.datos{
+  margin-top: 13%;
+  margin-left: 3%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1.nombre {
       color: gray;
-      top: -5px;
-      left: 51%;
       font-family: 'Zilla Slab', serif;
       color: white;
     }
 
 div.poster{
-top: 40px;
-left: 33%;
-
-width: 16%;
-}
-
-p.fechaDeOrigen{
-
-top: 72px;
-left: 51%;
-font-family: 'Roboto', sans-serif;
-}
-
-p.generosPertenecientes {
-
-  top: 105px;
-  left: 51%;
-font-family: 'Roboto', sans-serif;
-}
-
-p.lenguaje {
-
-  top: 140px;
-  left: 51%;
-font-family: 'Roboto', sans-serif;
-}
-
-p.sinopsis {
-
-  top: 180px;
-  left: 51%;
-font-family: 'Roboto', sans-serif;
-}
-
-p.trailer {
-  top: 250px;
-  left: 33%;
-font-family: 'Roboto', sans-serif;
-cursor: pointer;
+width: 46%;
+margin-top: 13%;
+margin-left: 19%;
 }
 
 button.lasRecomendaciones {
@@ -79,10 +51,18 @@ background: none;
 }
 
 a.hearts {
-  top: 240px;
-  left: 65%;
+width:4%;
 color: yellow;
+margin-left: 4%;
 }
+
+p.trailer {
+  top: 250px;
+  left: 33%;
+font-family: 'Roboto', sans-serif;
+cursor: pointer;
+}
+
 /* Buscador*/
 button#buscador {
 	color: black;
