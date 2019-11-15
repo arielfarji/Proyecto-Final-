@@ -3,42 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <script src="favoritas.css" charset="utf-8"></script>
   <link rel="stylesheet" href="HyF.css">
-  <link rel="stylesheet" href="infoxserie.css">
-  <script src="infoxserie.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="favoritas.css">
+  <script src="favoritas.js" charset="utf-8"></script>
   <script src="https://kit.fontawesome.com/6a7542e233.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
-  <script src="seriesxgenero.js" charset="utf-8"></script>
-
   <script src="busquedaAvanzada.js" charset="utf-8"></script>
-
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="slick.css"/>
-  <script type="text/javascript" src="slick.min.js"></script>
+  <!--Ulkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|Bowlby+One+SC&display=swap" rel="stylesheet">
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
-
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-
-<link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500|Aleo:400,700|Arbutus+Slab|Bowlby+One+SC|EB+Garamond:400,500|Gilda+Display|Merriweather:300|Noto+Serif+SC:400,500|Roboto:100|Source+Serif+Pro|Special+Elite|Staatliches|Zilla+Slab:500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded:800|Bowlby+One+SC&display=swap" rel="stylesheet">
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 </head>
-
 <body>
-<!-- div para la alerta de error -->
   <div class="error">
 
   </div>
   <header>
     <h1>Veo Veo</h1>
     <img src="img/logo.png" alt="">
-  <form class="form-buscador" action="resultado.html" method="get" id="busqueda">
+
+    <form class="form-buscador" action="resultado.html" method="get" id="busqueda">
       <input class="buscadorsecundario inputHidden" type="text" name="buscadorsecundario" placeholder="Buscador" value="">
       <button type="submit">Enviar</button>
       <i class="fas fa-search" id="lupita"></i>
@@ -46,13 +35,67 @@
     </form>
 
     <a class="head" href= "home.html"><label for="">Inicio</label></a>
-
+    <a href="favoritas.html" uk-icon="icon: heart" class="hearts"></a>
   </header>
+  <main>
+    <section>
+    <div class="busquedaAvanzada">
+
+      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h3>Busqueda avanzada</h3>
+          <form class="form-avanzado" action="resultadoavanzado.html" method="post">
+            Genero: <br>
+            <select class="opcionesGenero" name="">
+            <option value=""></option>
+            </select>
+            <br> Excluir: <br>
+            <select class="excluir" name="">
+              <option value=""></option>
+            </select>
+            <br> Ordenar por: <br>
+            <select class="orden" name="">
+              <option value=""></option>
+              <option value=""></option>
+                <option value="vote_average.desc">Más votadas desc.</option>
+                  <option value="vote_average.asc">Más votadas asc.</option>
+                    <option value="first_air_date.desc">Fecha estreno desc.</option>
+                      <option value="first_air_date.asc">Fecha estreno desc.</option>
+                        <option value="popularity.desc">Popularidad desc.</option>
+                          <option value="popularity.asc">Popularidad asc.</option>
+            </select>
+            <br> Años: <br>
+              <input type="number" name="" value="first_air_date_year">
+            <button type="submit" name="Buscar">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
+<!-- div para la alerta de error -->
+        <div class="error">
+
+        </div>
+
+  <h2>Series Favoritas</h2>
+  <section class="padrefav">
+    <ul>
+
+    </ul>
+  </section>
+  </main>
 
 
   <footer>
     <img class="TMDB"src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" alt="TMDB">
-  <label for+""> Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro </label>
+    <label for="">Ariel Farji - Tiziana Borghetti - Josefina D'Alessandro</label>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+  <script src="busquedaxgenero.js" charset="utf-8"></script>
+
+  <script src="seriesOnScroll.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ if (recuperoStorage == null) {
 }
 
 // Lo que va a pasar con el boton si el usuario YA TENIA la serie como fav
-if (seriesFavoritas.includes(idBuscado)) { //CAMBIAR ESTO
+if (seriesFavoritas.includes(idBuscado)) {
   document.querySelector("a.hearts svg path").style.fill = "yellow"; //como la imagen adentro tiene un svg y adentro un path (donde se le pasa el estilo)
 }
 
@@ -25,14 +25,14 @@ document.querySelector("a.hearts").onclick = function(e) { //evento donde hago c
   e.preventDefault()
   //Paso 2: Modificar la informacion
   // Si el gif ya era favorito
-  if (seriesFavoritas.includes(idBuscado)) { //CAMBIAR ESTO
+  if (seriesFavoritas.includes(idBuscado)) {
     // Lo quito
     var index = seriesFavoritas.indexOf(idBuscado); //CAMBIAR ESTO
     seriesFavoritas.splice(index, 1);
     document.querySelector("a.hearts svg path").style.fill = "rgba(255,255,255,0)";
   } else {
     //Lo agrego
-    seriesFavoritas.push(idBuscado); //CAMBIAR ESTO
+    seriesFavoritas.push(idBuscado);
     document.querySelector("a.hearts svg path").style.fill = "yellow";
   }
 
