@@ -34,7 +34,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=a6f60714320c532cb6f1
   // console.log( respuesta.results[1].poster_path );
   var series = respuesta.results;
   for (var i = 0; i < series.length; i++) {
-    document.querySelector("div.al-aire").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
+    document.querySelector("div.al-aire").innerHTML += "<div><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
       document.querySelector("ul#carruselAire").innerHTML += "<li><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></li>"
   }
 
@@ -59,7 +59,7 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=a6f60714320c532cb6f1
     // console.log( respuesta.results[1].poster_path );
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
-      document.querySelector("div.mayor-puntaje").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
+      document.querySelector("div.mayor-puntaje").innerHTML += "<div><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
       document.querySelector("ul#carruselPuntaje").innerHTML += "<li><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></li>"
     }
     /**donde dice src lo busco aparte y para poster es siempr el mismo*/
