@@ -58,11 +58,11 @@ document.querySelector('.generosPertenecientes').innerHTML += "<strong>Genero: <
   for (var i = 0; i < serie.genres.length; i++) {
 //si ya es igual a la cantidad de generos no poner comas
     if(i == serie.genres.length - 1){
-    document.querySelector('.generosPertenecientes').innerHTML += serie.genres[i].name
+    document.querySelector('.generosPertenecientes').innerHTML += "<a href=seriesxgenero.html?idGenero="+serie.genres[i].id+">" + serie.genres[i].name
   }
 //agregarle una coma dps de cada genero
   else{
-    document.querySelector('.generosPertenecientes').innerHTML += serie.genres[i].name + ', '
+    document.querySelector('.generosPertenecientes').innerHTML += "<a href=seriesxgenero.html?idGenero="+serie.genres[i].id+">" + serie.genres[i].name + ', ' + "</a>"
   }
 }
 //lenguaje de la serie
@@ -83,18 +83,26 @@ fetch("https://api.themoviedb.org/3/tv/"
   return response.json();
 })
 .then(function(recomen) {
-  document.querySelector(".lasRecomendaciones").submit =  fotos
   var imagenes = recomen.results;
+var divRecomendados = document.querySelector(".recomendados")
+var boton = document.querySelector('.lasRecomendaciones');
+
   for (var i = 0; i < imagenes.length; i++) {
+    // console.log(document.querySelector(".recomendados"));
     if(imagenes[i].poster_path != null) {
-      document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></div>"
+      divRecomendados.innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + imagenes[i].poster_path + "'></div>"
     } else {
-      document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
+      divRecomendados.innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
+    }
   }
-}
+  boton.onclick =  function() {
+    divRecomendados.classList.toggle("ocultar");
+  }
+
 }
 )
 .catch(function(error) {
+  console.log(error);
   alert("Error, perdon, vuelva mas tarde")
 })
 
