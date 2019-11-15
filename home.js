@@ -9,7 +9,7 @@ window.onload = function () {
     // console.log( respuesta.results[1].poster_path );
     var series = respuesta.results;
     for (var i = 0; i < series.length; i++) {
-      document.querySelector("div.populares").innerHTML += "<div><a href='infoxserie.html'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
+      document.querySelector("div.populares").innerHTML += "<div><a href='infoxserie.html?id=" + series[i].id + "'><img src='http://image.tmdb.org/t/p/w200" + series[i].poster_path + "'></a></div>"
     }
 
     setTimeout(function() {

@@ -5,7 +5,7 @@ body{
 
 }
 main.padre{
-  position: relative;
+  display: flex;
   margin-top: auto;
   height: 600px;
 color: white;
@@ -14,7 +14,7 @@ a.head{
   cursor:pointer;
 }
 h1.nombre {
-  position: absolute;
+
       color: gray;
       top: -5px;
       left: 51%;
@@ -25,40 +25,39 @@ h1.nombre {
 div.poster{
 top: 40px;
 left: 33%;
-position: absolute;
+
 width: 16%;
 }
 
 p.fechaDeOrigen{
-position: absolute;
+
 top: 72px;
 left: 51%;
 font-family: 'Roboto', sans-serif;
 }
 
 p.generosPertenecientes {
-  position: absolute;
+
   top: 105px;
   left: 51%;
 font-family: 'Roboto', sans-serif;
 }
 
 p.lenguaje {
-  position: absolute;
+
   top: 140px;
   left: 51%;
 font-family: 'Roboto', sans-serif;
 }
 
 p.sinopsis {
-  position: absolute;
+
   top: 180px;
   left: 51%;
 font-family: 'Roboto', sans-serif;
 }
 
 p.trailer {
-  position: absolute;
   top: 250px;
   left: 33%;
 font-family: 'Roboto', sans-serif;
@@ -66,7 +65,6 @@ cursor: pointer;
 }
 
 button.lasRecomendaciones {
-  position: absolute;
   top: 240px;
   left: 50%;
 font-family: 'Roboto', sans-serif;
@@ -81,7 +79,6 @@ background: none;
 }
 
 a.hearts {
-  position: absolute;
   top: 240px;
   left: 65%;
 color: yellow;
@@ -148,8 +145,8 @@ div.menuOculto a{
 /*diseño lista de generos*/
 .listadegeneros{
   width: 20%;
-  position: absolute;
-  top: 14%;
+  position: relative;
+  top: 77px;
   left: 2%;
 
 }

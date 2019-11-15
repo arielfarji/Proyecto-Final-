@@ -30,7 +30,7 @@ document.querySelector('.lenguaje').innerHTML = serie.original_language
 //sinopsis
 document.querySelector('.sinopsis').innerHTML = serie.overview
 })
-
+//poster de la serie
 fetch ("https://api.themoviedb.org/3/tv/"+idBuscado+"/images?api_key=a6f60714320c532cb6f1c6ddeef46bac")
 .then(function(response) {
   return response.json();
@@ -42,7 +42,18 @@ for (var i = 0; i < fotoDeLaSerie.length; i++) {
 }
 })
 
+//recomendaciones de la series
+fetch("https://api.giphy.com/v1/gifs/trending?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU&limit=25&rating=G")
+.then(function(response) {
+  return response.json();
+})
+.then(function(respuesta) {
 
+  }
+)
+.catch(function(error) {
+  alert("Error, perdon, vuelva mas tarde")
+})
 
 
 var lupita = document.querySelector("#lupita");

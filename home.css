@@ -71,8 +71,8 @@ div.menuOculto a{
 /*diseño lista de generos*/
 .listadegeneros{
   width: 20%;
-  position: absolute;
-  top: 14%;
+  position: relative;
+  top: 77px;
   left: 2%;
 
 }
@@ -147,7 +147,7 @@ form input{
 section.columnas{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: left;
   text-align: -webkit-center;
   width: 80%;
 
@@ -155,21 +155,13 @@ section.columnas{
 
 
 .columnas article{
-  width: 23%;
+  width: 21%;
+  margin-right: 7%;
 }
-.columna1{
-position: relative;
-left: 17%;
+.columnas article img{
+  width: 100%;
 }
 
-.columna2{
-position: relative;
-left: 12.5%;
-}
-.columna3{
-position: relative;
-left: 9%;
-}
 .titulo-populares {
   color: white;
   font-size: 32px;
