@@ -210,7 +210,7 @@ section.mobile a{
 }
 
 /* diseño mobile */
-section.desktop { display: static }
+section.desktop { position: static }
 section.mobile { display: none }
 
 @media (max-width: 600px) {
