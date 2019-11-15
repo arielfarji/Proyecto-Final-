@@ -27,6 +27,13 @@ header form.form-buscador{
   display: flex;
   align-items: center;
   order: 3;
+  margin-right: 10px;
+}
+/*filtro */
+header form.form-buscador i.fas{
+    color: yellow;
+    margin-left: 3px;
+    margin-right: 10px;
 }
 
 a.head{ /*palabra inicio*/
@@ -35,20 +42,23 @@ a.head{ /*palabra inicio*/
   margin-left: 15px;
   order: 1;
 }
-input.buscadorsecundario{ /*position del buscador de la lupa*/
-
+a.hearts{
+  color: yellow;
+  margin-left: 3px;
+  margin-right: 8px;
 }
-input.inputHidden{ /*position del buscador de la lupa*/
-
+a.hearts:hover{
+  color: yellow;
+}
+a.fas fa-filter{
+  margin-right: 5px;
 }
 
 .fa-search{ /*estilo icono lupita*/
   color: yellow;
+  margin-right: 3px;
 }
 
-.fa-filter{ /*estilo icono filtro*/
-  color: yellow;
-}
 footer {
   background-color: rgb(50, 54, 57);
   height: 50px;
