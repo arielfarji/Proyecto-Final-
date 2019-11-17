@@ -18,6 +18,7 @@ header h1{
   font-family: 'Bowlby One SC', cursive;
   margin: 0;
   order: 2;
+  margin-left: 7%;
 }
 header img{
   width: 10%;
@@ -41,7 +42,13 @@ a.head{ /*palabra inicio*/
   font-size: 20px;
   margin-left: 15px;
   order: 1;
+  font-family: 'Roboto', sans-serif
 }
+
+a.head:hover{
+  color: yellow;
+}
+
 a.hearts{
   color: yellow;
   margin-left: 3px;

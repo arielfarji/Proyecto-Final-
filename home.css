@@ -74,23 +74,25 @@ div.menuOculto a{
   position: relative;
   top: 77px;
   left: 2%;
+  margin-left: 1%;
+  margin-top: 8%;
 
 }
 .listadegeneros ul{
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   padding-left: 40px;
 }
 .listadegeneros label{
   color: white;
-  font-size: 25px;
+  font-size: 27px;
   font-family: 'Zilla Slab', serif;
   margin: 0 auto;
   margin-top: 10%;
 }
 
 ul.lista-generos li a:hover{
-  font-size: 16px;
+  font-size: 19px;
   color: #c6f01d;
 }
 ul.lista-generos li{
@@ -149,14 +151,15 @@ section.columnas{
   flex-wrap: wrap;
   justify-content: left;
   text-align: -webkit-center;
-  width: 80%;
+  width: 75%;
+  margin-top: 1.5%;
 
 }
 
 
 .columnas article{
   width: 21%;
-  margin-right: 7%;
+  margin-right: 10%;
 }
 .columnas article img{
   width: 100%;
