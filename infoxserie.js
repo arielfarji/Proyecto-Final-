@@ -93,7 +93,7 @@ var boton = document.querySelector('.lasRecomendaciones');
     }
   }
 boton.onclick =  function() {
-  
+
     document.querySelector("div.losRecomendados").classList.toggle("losRecomendados");
   }
 }

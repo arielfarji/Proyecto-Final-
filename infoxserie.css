@@ -15,6 +15,7 @@ main.padre{
 /*  margin-top: auto;*/
   /*height: 1100px;*/
   color: white;
+  margin-right: 5%;
 }
 
 div.losRecomendados{
@@ -53,18 +54,18 @@ h1.nombre {
     }
 
 div.poster{
-width: 44%;
-margin-top: 5%;
-display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 44%;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 button.lasRecomendaciones {
   top: 240px;
   left: 50%;
-font-family: 'Roboto', sans-serif;
-background: none;
+  font-family: 'Roboto', sans-serif;
+  background: none;
 	border-radius:15px;
 	border:1px solid #f5e90e;
 	display:inline-block;
