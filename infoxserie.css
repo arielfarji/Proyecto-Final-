@@ -227,4 +227,7 @@ section.mobile { display: none }
   section.mobile{
     display: block;
   }
+  div.trailers{
+    margin-left: 4%;
+  }
 }
