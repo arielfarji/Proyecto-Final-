@@ -69,8 +69,7 @@ document.querySelector('.generosPertenecientes').innerHTML += "<strong>Genero: <
 document.querySelector('.lenguaje').innerHTML = "<strong>Lenguaje:</strong> " + serie.original_language
 //sinopsis
 document.querySelector('.sinopsis').innerHTML = "<strong>Sinopsis: </strong>" + serie.overview
-
-
+//poster de la img
 document.querySelector('.poster img').src = 'http://image.tmdb.org/t/p/w300' + serie.poster_path
 })
 
@@ -94,7 +93,7 @@ var boton = document.querySelector('.lasRecomendaciones');
     }
   }
 boton.onclick =  function() {
-    document.querySelector("div.losRecomendados").classList.toggle("ocultar");
+  
     document.querySelector("div.losRecomendados").classList.toggle("losRecomendados");
   }
 }
@@ -139,7 +138,7 @@ var  trailer = trai.results;
 )
   .catch(function(error) {
     console.log(error);
-    alert("Error, perdon, vuelva mas tarde")
+
   })
 
 }
