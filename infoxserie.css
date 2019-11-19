@@ -5,10 +5,11 @@ body{
 }
 
 div.trailers{
-  margin-left: 45%;
-margin-top: 1%;
+  margin-left: 8%;
 margin-bottom: 3%;
+margin-top: 3%;
 }
+
 main.padre{
   display: flex;
 /*  margin-top: auto;*/
@@ -21,6 +22,7 @@ width: 58%;
 margin-left: 259px;
 display: none;
 }
+
 a.head{
   cursor:pointer;
 }
@@ -40,7 +42,6 @@ div.recomendados{
 }
 div.datos{
   margin-top: 5%;
-  margin-left: -14%;
   font-family: 'Roboto', sans-serif;
   width: 50%;
 }
@@ -54,7 +55,9 @@ h1.nombre {
 div.poster{
 width: 44%;
 margin-top: 5%;
-margin-left: 15%;
+display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 button.lasRecomendaciones {
