@@ -83,4 +83,9 @@ h1.title{
   color: gray;
 }
 
+div.noHay{
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
 /*Titulo del genero*/

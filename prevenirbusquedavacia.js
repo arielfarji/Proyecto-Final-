@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
 
     if (generoElegido != "" && generoExcluido != "") {
       event.preventDefault();
-      alert("tesdt")
+      alert("Seleccione o genero o excluir")
       // Mostrar otro error
     }
 
