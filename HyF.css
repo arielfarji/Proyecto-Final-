@@ -21,10 +21,12 @@ header h1{
 width: 33.3%;
 text-align: center;
 }
+
 header img{
   width: 10%;
   margin: 0 15px;
 }
+
 header form.form-buscador{
   display: flex;
   align-items: center;
