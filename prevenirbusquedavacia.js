@@ -1,8 +1,8 @@
 window.addEventListener("load", function () {
 
-
+// Variables cuando envio//
   document.querySelector(".form-avanzado").onsubmit = function (event) {
-    event.preventDefault();
+
     var eGenero = document.querySelector(".opcionesGenero");
     var generoElegido = eGenero.options[eGenero.selectedIndex].value;
 
@@ -14,19 +14,18 @@ window.addEventListener("load", function () {
 
     var year = document.querySelector(".year").value;
 
-    event.preventDefault();
+
     console.log(generoElegido);
 
-
+//si todos los generos son vacios, alerta!//
     if (generoElegido == "" && generoExcluido == "" && orden == "" && year == "" ) {
       event.preventDefault();
       alert('Seleccione al menos un campo')
     }
-
+//si genero elegido y genero excluido estan completos, alerta!//
     if (generoElegido != "" && generoExcluido != "") {
       event.preventDefault();
       alert("Seleccione o genero o excluir")
-      // Mostrar otro error
     }
 
   }
