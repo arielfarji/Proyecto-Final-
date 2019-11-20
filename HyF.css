@@ -18,8 +18,8 @@ header h1{
   font-family: 'Bowlby One SC', cursive;
   margin: 0;
   order: 2;
-  width: 33.3%;
-  text-align: center;
+width: 33.3%;
+text-align: center;
 }
 
 header img{
@@ -33,7 +33,6 @@ header form.form-buscador{
   order: 3;
   margin-right: 10px;
   width: 33.3%;
-  min-width: 300px;
 }
 /*filtro */
 header form.form-buscador i.fas{
@@ -92,14 +91,27 @@ footer span{
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
 }
-
+@media only screen and (min-width:992px){
+  header form.form-buscador{
+    min-width: 300px;
+  }
+}
 @media (max-width: 600px){
   header{
   flex-wrap: wrap;
+  display: flex;
   }
   header h1{
       width: 100%;
     font-size: 30px;
     order: 0;
   }
+  a.head{
+    width:50%;
+  }
+  form.form-buscador{
+    width:50%;
+    max-width: 145px;
+  }
+
 }
