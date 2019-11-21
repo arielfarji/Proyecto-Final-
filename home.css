@@ -162,7 +162,7 @@ section.columnas{
   margin-right: 10%;
 }
 .columnas article img{
-  width: 100%;
+  width: 86%;
 }
 
 .titulo-populares {
@@ -201,7 +201,7 @@ button.slick-prev, button.slick-next {
   font-family: "Staatliches"
 }
 section.mobile{
-  margin-left: 20px;
+  margin-left: 7px; /*antes era 20 por si lo quieren cambiar*/
   width: 80%;
 }
 section.mobile a{

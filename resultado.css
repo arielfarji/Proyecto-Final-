@@ -5,7 +5,9 @@ body{
   background-color: rgb(50, 54, 57);
   /* overflow: hidden; */
 }
-
+.resultados{
+  min-height: 100vh;
+}
 button#buscador {
 	color: black;
 }
@@ -56,7 +58,6 @@ width:20%;
 section.resultados{
   display:flex;
   flex-wrap: wrap;
-  padding-bottom: 100px;
 }
 
 h2.title { /*ESTO ES PARA LA PALABRA DEL GENERO DESPUES DE LA BUSQUEDA*/
@@ -64,7 +65,8 @@ h2.title { /*ESTO ES PARA LA PALABRA DEL GENERO DESPUES DE LA BUSQUEDA*/
   color: #c6f01d;
   font-size: 33px;
   margin-left: 2%;
-  margin-top: 1%;
+ margin-top: 1%;
+  margin-bottom: 1%;
   font-family: 'Zilla Slab', serif;
 }
 
