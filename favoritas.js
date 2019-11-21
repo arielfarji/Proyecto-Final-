@@ -7,6 +7,7 @@ window.onload = function() {
   if (recuperoStorage == null) {
     // Creo una lista vacia
     seriesFavoritas = [];
+
   } else {
     // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
     seriesFavoritas = JSON.parse(recuperoStorage);

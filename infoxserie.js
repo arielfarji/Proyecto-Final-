@@ -15,19 +15,19 @@ if (recuperoStorage == null) {
   seriesFavoritas = JSON.parse(recuperoStorage);
 }
 
-// Lo que va a pasar con el boton si el usuario YA TENIA la serie como fav
+// Lo que va a pasar con el boton si el usuario YA TENIA la serie como fav, que el corazon esté relleno de amarillo
 if (seriesFavoritas.includes(idBuscado)) {
   document.querySelector("a.favs svg path").style.fill = "yellow"; //como la imagen adentro tiene un svg y adentro un path (donde se le pasa el estilo)
 }
 
 document.querySelector("a.favs").onclick = function(e) { //evento donde hago click
 
-  e.preventDefault()
+  e.preventDefault() /*esto es porque es un a el corazon*/
   //Paso 2: Modificar la informacion
   // Si el gif ya era favorito
   if (seriesFavoritas.includes(idBuscado)) {
     // Lo quito
-    var index = seriesFavoritas.indexOf(idBuscado); //CAMBIAR ESTO
+    var index = seriesFavoritas.indexOf(idBuscado);
     seriesFavoritas.splice(index, 1);
     document.querySelector("a.favs svg path").style.fill = "rgba(255,255,255,0)";
   } else {
@@ -39,7 +39,7 @@ document.querySelector("a.favs").onclick = function(e) { //evento donde hago cli
 
   //Paso 3: Escribir en storage
   var infoParaStorage = JSON.stringify(seriesFavoritas);
-  localStorage.setItem("seriesFavoritas", infoParaStorage);
+  localStorage.setItem("seriesFavoritas", infoParaStorage); 
 
 }
 
