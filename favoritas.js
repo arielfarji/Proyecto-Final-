@@ -23,4 +23,12 @@ window.onload = function() {
         document.querySelector(".padrefav ul").innerHTML += "<li><h3><a href=infoxserie.html?id=" + serie.id + ">" + serie.name + "</a></h3><img src=http://image.tmdb.org/t/p/w200" + serie.poster_path + "></li>";
       })
   }
+  var lupita = document.querySelector("#lupita");
+  var inputBuscador = document.querySelector(".buscadorsecundario");
+
+  lupita.onclick = function() {
+    inputBuscador.classList.toggle('inputHidden');
+    setTimeout(function() {inputBuscador.focus();}, 301)
+
+  }
 }

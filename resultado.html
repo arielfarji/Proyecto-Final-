@@ -42,38 +42,38 @@
   </header>
 
   <section>
-  <div class="busquedaAvanzada">
+    <div class="busquedaAvanzada">
 
-    <div id="offcanvas-derecho" uk-offcanvas="flip: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <h3>Busqueda avanzada</h3>
-        <form class="form-avanzado" action="resultadoavanzado.html" method="get">
-          <p class="busqueda"> Genero: </p>
-          <select class="opcionesGenero" name="genero">
-          <option value=""></option>
-          </select>
-          <br><p class="busqueda"> Excluir: </p>
-          <select class="excluir" name="excluir">
-            <option value=""></option>
-          </select>
-          <br> <p class="busqueda"> Ordenar por: </p>
-          <select class="orden" name="orden">
-            <option value=""></option>
+      <div id="offcanvas-derecho" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <h3>Busqueda avanzada</h3>
+          <form class="form-avanzado" action="resultadoavanzado.html" method="get">
+            <p class="busqueda"> Genero: </p>
+            <select class="opcionesGenero" name="genero">
+              <option value=""></option>
+            </select>
+            <br><p class="busqueda"> Excluir: </p>
+            <select class="excluir" name="excluir">
+              <option value=""></option>
+            </select>
+            <br> <p class="busqueda"> Ordenar por: </p>
+            <select class="orden" name="orden">
+              <option value=""></option>
               <option value="vote_average.desc">Más votadas desc.</option>
-                <option value="vote_average.asc">Más votadas asc.</option>
-                  <option value="first_air_date.desc">Fecha estreno desc.</option>
-                    <option value="first_air_date.asc">Fecha estreno asc.</option>
-                      <option value="popularity.desc">Popularidad desc.</option>
-                        <option value="popularity.asc">Popularidad asc.</option>
-          </select>
-          <br> <p class="busqueda"> Año de estreno:</p>
+              <option value="vote_average.asc">Más votadas asc.</option>
+              <option value="first_air_date.desc">Fecha estreno desc.</option>
+              <option value="first_air_date.asc">Fecha estreno asc.</option>
+              <option value="popularity.desc">Popularidad desc.</option>
+              <option value="popularity.asc">Popularidad asc.</option>
+            </select>
+            <br> <p class="busqueda"> Año de estreno:</p>
             <input class="year" type="number" name="year" value="first_air_date_year">
-          <button type="submit" name="Buscar">Buscar</button>
-        </form>
+            <button type="submit" name="Buscar">Buscar</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
   </section>
   <!-- div para la alerta de error -->
 
