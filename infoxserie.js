@@ -1,12 +1,12 @@
 window.onload = function(){
-
+//para que me encuentre lo que agrego despues del signo de ?
 var query = new URLSearchParams(location.search)
 
 var idBuscado = query.get('id')
 
 var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-// Si todavía no tenía gifs favoritos
+// Si todavía no tenía series favoritos
 if (recuperoStorage == null) {
   // Creo una lista vacia
   seriesFavoritas = [];
@@ -24,7 +24,7 @@ document.querySelector("a.favs").onclick = function(e) { //evento donde hago cli
 
   e.preventDefault() /*esto es porque es un a el corazon*/
   //Paso 2: Modificar la informacion
-  // Si el gif ya era favorito
+  // Si la serie ya era favorito
   if (seriesFavoritas.includes(idBuscado)) {
     // Lo quito
     var index = seriesFavoritas.indexOf(idBuscado);
@@ -38,8 +38,9 @@ document.querySelector("a.favs").onclick = function(e) { //evento donde hago cli
 
 
   //Paso 3: Escribir en storage
+  //uso stringify porque solo puedo almacenar strings
   var infoParaStorage = JSON.stringify(seriesFavoritas);
-  localStorage.setItem("seriesFavoritas", infoParaStorage); 
+  localStorage.setItem("seriesFavoritas", infoParaStorage);
 
 }
 

@@ -16,9 +16,4 @@ window.addEventListener("load", function () {
     }
   })
 
-  //Agregar ordenar por y años.
-
-  
-
-// })
 })
