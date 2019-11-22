@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
           console.log(respuesta);
           for (var i = 0; i < respuesta.results.length; i++) {
             if(respuesta.results[i].poster_path != null) { //Esto quiere decir SI el poster es DISTINTO a Null pone la imagen.
-              document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='http://image.tmdb.org/t/p/w300" + respuesta.results[i].poster_path + "'></div>"
+              document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><a href='infoxserie.html?id=" + respuesta.results[i].id + "'><img src='http://image.tmdb.org/t/p/w300" + respuesta.results[i].poster_path + "'></a></div>"
             } else { //sino pone esta.
               document.querySelector("div#busqueda").innerHTML += "<div class='pelis'id='errores'><img src='img/newError.jpeg'></div>";
             }
